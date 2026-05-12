@@ -676,23 +676,25 @@
     }
 
     @media (max-width: 899px) {
-      #story.wrap>* {
-        margin-inline: 0;
-        padding-inline: 20px;
-        box-sizing: border-box;
-        max-width: 100%;
-      }
-
-      .intro-nym>* {
-        min-width: 0;
+      .intro-nym {
+        gap: clamp(1.6rem, 7vw, 2.5rem);
       }
 
       .intro-nym.intro-nym--flip .intro-copy {
         order: -1;
       }
 
+      .intro-nym>* {
+        min-width: 0;
+      }
+
       .intro-visual {
-        min-height: clamp(200px, 48vw, 280px);
+        min-height: clamp(260px, 68vw, 340px);
+        border-radius: 18px;
+      }
+
+      .intro-phone {
+        width: min(210px, 54vw);
       }
 
       #story .intro-copy {
@@ -732,8 +734,9 @@
 
       #story .nym-h2 {
         margin-bottom: 1.35rem;
-        font-size: clamp(1.5rem, 5.5vw + 0.55rem, 1.95rem);
-        line-height: 1.14;
+        max-width: 18ch;
+        font-size: clamp(1.62rem, 6.2vw, 2rem);
+        line-height: 1.16;
       }
     }
 
@@ -903,13 +906,14 @@
 
     .intro-nym {
       display: grid;
-      gap: clamp(2rem, 4vw, 3rem);
-      align-items: center;
+      gap: clamp(2rem, 5vw, 3.75rem);
+      align-items: stretch;
+      width: 100%;
     }
 
     @media (min-width: 900px) {
       .intro-nym {
-        grid-template-columns: 1fr 1.05fr;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
       }
 
       .intro-nym.intro-nym--flip {
@@ -923,13 +927,14 @@
 
     .intro-visual {
       position: relative;
-      min-height: 300px;
+      min-height: clamp(320px, 36vw, 430px);
       border-radius: clamp(18px, 2.5vw, 28px);
       background: linear-gradient(145deg, #f4f4f5, #ffffff);
       box-shadow: var(--elev-1);
       display: grid;
       place-items: center;
       overflow: hidden;
+      width: 100%;
       transition:
         transform 0.4s cubic-bezier(0.34, 1.42, 0.52, 1),
         box-shadow 0.4s ease;
@@ -950,7 +955,7 @@
 
     .intro-phone {
       position: relative;
-      width: min(240px, 70%);
+      width: min(248px, 62%);
       aspect-ratio: 10 / 19;
       border-radius: 22px;
       padding: 8px;
@@ -980,6 +985,11 @@
       border: 1px solid rgba(255, 255, 255, 0.35);
     }
 
+    .intro-copy {
+      align-self: center;
+      min-width: 0;
+    }
+
     .nym-body {
       margin: 0 0 1.15rem;
       color: #52525b;
@@ -995,11 +1005,16 @@
     .nym-h2 {
       margin: 0 0 1.85rem;
       font-family: var(--font-display);
-      font-size: clamp(1.85rem, 3.5vw, 2.45rem);
+      font-size: clamp(1.85rem, 3vw, 2.35rem);
       font-weight: 700;
       letter-spacing: -0.04em;
-      line-height: 1.1;
+      line-height: 1.12;
       color: var(--ink);
+      max-width: 15ch;
+    }
+
+    .intro-copy .btn-outline-dark {
+      margin-top: 0.15rem;
     }
 
     .feature-card__headline .zh-sub {
@@ -1040,6 +1055,10 @@
       transition: transform 0.3s cubic-bezier(0.34, 1.42, 0.52, 1);
     }
 
+    .engine-row:hover .engine-row__top {
+      transform: translateX(4px);
+    }
+
     .engine-row__icon {
       width: 52px;
       height: 52px;
@@ -1053,6 +1072,11 @@
       transition:
         transform 0.34s cubic-bezier(0.34, 1.42, 0.52, 1),
         box-shadow 0.34s ease;
+    }
+
+    .engine-row:hover .engine-row__icon {
+      transform: translateY(-3px) scale(1.06);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
     }
 
     .engine-row__icon--s {
@@ -1106,11 +1130,26 @@
       border-color: rgba(24, 24, 27, 0.11);
     }
 
+    .scroll-animate.in-view .mini-card:hover,
+    .scroll-animate[data-reveal-once="1"] .mini-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(37, 99, 235, 0.14);
+      box-shadow:
+        0 10px 24px rgba(15, 23, 42, 0.07),
+        0 30px 52px -28px rgba(15, 23, 42, 0.2);
+    }
+
+    .scroll-animate.in-view .mini-card:hover h4,
+    .scroll-animate[data-reveal-once="1"] .mini-card:hover h4 {
+      color: var(--accent);
+    }
+
     .mini-card h4 {
       margin: 0 0 0.5rem;
       font-size: 0.92rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      transition: color 0.24s ease;
     }
 
     .mini-card p {
@@ -1129,6 +1168,16 @@
       margin-top: 0.35rem;
       color: var(--muted);
       font-size: 0.8rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .engine-row:hover .engine-row__top,
+      .engine-row:hover .engine-row__icon,
+      .scroll-animate.in-view .mini-card:hover,
+      .scroll-animate[data-reveal-once="1"] .mini-card:hover {
+        transform: none;
+      }
     }
 
     .security-split {
@@ -1964,7 +2013,7 @@
       border-radius: 50%;
       filter: blur(48px);
       pointer-events: none;
-      animation: phantom-drift 15s ease-in-out infinite;
+      animation: phantom-drift 40s ease-in-out infinite;
       will-change: transform, opacity;
     }
 
@@ -3570,7 +3619,7 @@
           <span>The Block</span>
         </div>
       </div>
-      <div class="scroll-animate">
+      <div class="scroll-animate" style="padding: 30px;">
         <div class="intro-nym intro-nym--flip">
           <div class="intro-visual animate-item delay-1">
             <div class="intro-phone">
