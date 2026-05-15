@@ -2974,3 +2974,321 @@ figcaption span {
     translate: 0 -8px;
   }
 }
+
+.privacy-action {
+  display: grid;
+  gap: 34px;
+  padding-top: 150px;
+}
+
+.privacy-action-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.52fr);
+  gap: 48px;
+  align-items: end;
+}
+
+.privacy-action-copy h2 {
+  margin-bottom: 0;
+}
+
+.privacy-action-copy p:last-child {
+  margin: 0 0 10px;
+  color: #65727d;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.privacy-stage {
+  position: relative;
+  isolation: isolate;
+  min-height: 520px;
+  padding: clamp(10px, 2vw, 18px);
+  overflow: hidden;
+  border: 1px solid rgba(0, 167, 255, 0.16);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(0, 167, 255, 0.2), transparent 34rem),
+    radial-gradient(circle at 52% 56%, rgba(0, 209, 143, 0.16), transparent 22rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(238, 248, 255, 0.68));
+  box-shadow: 0 54px 150px rgba(0, 79, 140, 0.16);
+  transform: perspective(1400px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.privacy-stage:hover {
+  box-shadow: 0 70px 180px rgba(0, 126, 210, 0.22);
+}
+
+.privacy-stage img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-radius: 8px;
+  filter: drop-shadow(0 34px 74px rgba(8, 36, 56, 0.16));
+  animation: privacyImageFloat 5.6s ease-in-out infinite;
+}
+
+.privacy-stage::before,
+.privacy-stage::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.privacy-stage::before {
+  inset: -40% 18% 44%;
+  z-index: 0;
+  background: conic-gradient(from 120deg, transparent, rgba(0, 167, 255, 0.22), rgba(0, 209, 143, 0.16), transparent 45%);
+  filter: blur(24px);
+  animation: privacyConeSpin 8s linear infinite;
+}
+
+.privacy-stage::after {
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(112deg, transparent 8%, rgba(255, 255, 255, 0.72) 24%, rgba(0, 167, 255, 0.22) 31%, transparent 46%);
+  transform: translateX(-110%);
+  animation: privacySweep 4.8s ease-in-out infinite;
+}
+
+.privacy-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit-a {
+  width: 72%;
+  aspect-ratio: 1;
+  border: 2px solid rgba(0, 167, 255, 0.24);
+  border-top-color: rgba(0, 209, 143, 0.68);
+  animation: privacyOrbit 9s linear infinite;
+}
+
+.orbit-b {
+  width: 54%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(55, 108, 255, 0.2);
+  border-right-color: rgba(0, 167, 255, 0.62);
+  animation: privacyOrbitReverse 6.5s linear infinite;
+}
+
+.privacy-beam {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  top: 50%;
+  z-index: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(0, 167, 255, 0.86), rgba(0, 209, 143, 0.86), transparent);
+  box-shadow: 0 0 34px rgba(0, 167, 255, 0.48), 0 0 66px rgba(0, 209, 143, 0.28);
+  transform: translateY(-50%);
+  animation: beamFlow 1.8s ease-in-out infinite;
+}
+
+.privacy-chip {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid rgba(0, 167, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #075a82;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 16px 42px rgba(0, 126, 210, 0.14);
+  backdrop-filter: blur(16px);
+}
+
+.chip-left {
+  left: 11%;
+  top: 17%;
+  animation: chipDrift 4.2s ease-in-out infinite;
+}
+
+.chip-right {
+  right: 11%;
+  top: 17%;
+  animation: chipDrift 4.2s ease-in-out 800ms infinite;
+}
+
+.privacy-spark {
+  position: absolute;
+  z-index: 4;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00a7ff;
+  box-shadow: 0 0 22px rgba(0, 167, 255, 0.82), 0 0 46px rgba(0, 209, 143, 0.42);
+}
+
+.spark-a {
+  left: 27%;
+  top: 49%;
+  animation: sparkTravelA 2.9s linear infinite;
+}
+
+.spark-b {
+  left: 47%;
+  top: 43%;
+  animation: sparkTravelB 3.4s linear 400ms infinite;
+}
+
+.spark-c {
+  right: 27%;
+  top: 54%;
+  animation: sparkTravelC 3.1s linear 1s infinite;
+}
+
+@keyframes privacyImageFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.012);
+  }
+}
+
+@keyframes privacyConeSpin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes privacySweep {
+  0%,
+  38% {
+    transform: translateX(-110%);
+  }
+  72%,
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+@keyframes privacyOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) scaleX(1.18);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) scaleX(1.18);
+  }
+}
+
+@keyframes privacyOrbitReverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg) scaleX(0.88);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg) scaleX(0.88);
+  }
+}
+
+@keyframes beamFlow {
+  0%,
+  100% {
+    opacity: 0.35;
+    filter: blur(2px);
+    transform: translateY(-50%) scaleX(0.7);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(-50%) scaleX(1);
+  }
+}
+
+@keyframes chipDrift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkTravelA {
+  from {
+    transform: translateX(-20px) scale(0.5);
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(520px) scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkTravelB {
+  from {
+    transform: translateX(-240px) translateY(28px) scale(0.4);
+    opacity: 0;
+  }
+  18%,
+  78% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(300px) translateY(-22px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkTravelC {
+  from {
+    transform: translateX(-360px) translateY(-12px) scale(0.45);
+    opacity: 0;
+  }
+  18%,
+  78% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(120px) translateY(18px) scale(1.08);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .privacy-action-copy {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .privacy-stage {
+    min-height: 330px;
+  }
+
+  .privacy-chip {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .privacy-action {
+    padding-top: 90px;
+  }
+
+  .privacy-stage {
+    min-height: auto;
+    padding: 8px;
+  }
+}

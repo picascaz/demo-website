@@ -74,6 +74,11 @@ const translations = {
     "metrics.countries": "覆盖国家和地区",
     "metrics.secured": "累计保护资产",
     "metrics.daily": "日均处理规模",
+    "privacyAction.kicker": "隐私转账演示",
+    "privacyAction.title": "把隐私转账过程，直接展示给用户看。",
+    "privacyAction.copy": "两端聊天、端到端加密通道、USDT 转账卡片和隐私保护状态，在一个高可信的产品演示画面里完成。",
+    "privacyAction.chipLeft": "端到端加密",
+    "privacyAction.chipRight": "ZK 保护",
     "features.kicker": "收款、转账、隐私支付",
     "features.title": "一个专为 USDT 打造的隐私和安全的家。",
     "features.receiveTitle": "安全收 U",
@@ -171,6 +176,11 @@ const translations = {
     "metrics.countries": "Supported countries",
     "metrics.secured": "Total value secured",
     "metrics.daily": "Daily processed",
+    "privacyAction.kicker": "Privacy transfer demo",
+    "privacyAction.title": "Show privacy transfers in action.",
+    "privacyAction.copy": "Two-sided chat, an end-to-end encrypted tunnel, USDT transfer cards, and privacy status cues come together in one high-trust product demo.",
+    "privacyAction.chipLeft": "E2E Encrypted",
+    "privacyAction.chipRight": "ZK Protected",
     "features.kicker": "Receive. Send. Private Pay.",
     "features.title": "One safe and private home for all your USDT.",
     "features.receiveTitle": "Receive USDT safely",
@@ -273,7 +283,7 @@ applyLanguage(currentLang);
 
 const revealTargets = [
   ...document.querySelectorAll(
-    ".section, .metrics, .trust-band, .split-copy article, .feature-card, .engine-card, .ecosystem-list article, .security-grid article, .quote-grid figure",
+    ".section, .metrics, .trust-band, .privacy-stage, .split-copy article, .feature-card, .engine-card, .ecosystem-list article, .security-grid article, .quote-grid figure",
   ),
 ];
 
@@ -362,7 +372,7 @@ if (!prefersReducedMotion) {
   });
 
   const tiltTargets = document.querySelectorAll(
-    ".feature-card, .engine-card, .split-copy article, .ecosystem-list article, .security-grid article, .quote-grid figure",
+    ".privacy-stage, .feature-card, .engine-card, .split-copy article, .ecosystem-list article, .security-grid article, .quote-grid figure",
   );
 
   tiltTargets.forEach((target) => {
