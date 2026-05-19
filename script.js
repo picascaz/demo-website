@@ -4,6 +4,62 @@ const pairs = [
   ["Dollar", "YOU"],
 ];
 
+const translations = {
+  zh: {
+    download: "下载",
+    downloadAria: "下载 D4U",
+    langToggle: "EN / 中文",
+    introTitle: "欢迎来到D4U-- 下一代稳定币智能账户基础设施体系",
+    introBlockOneTitle: "传统钱包存在设计缺陷",
+    introBlockOneBody:
+      "传统web3钱包无法从根源保护你的USDT隐私和安全，你的钱包拥有极大的被污染风险，以及隐私泄露风险。",
+    introBlockTwoTitle: "D4U不只是钱包，更是USDT秩序的构建者",
+    introBlockTwoBody:
+      "得益于去中心化设计、D4U混合网络技术和零知识证明技术，D4U重新构建了USDT的使用秩序。",
+  },
+  en: {
+    download: "Download",
+    downloadAria: "Download D4U",
+    langToggle: "中文 / EN",
+    introTitle:
+      "Welcome to D4U- The Next-Gen Smart account infrastructure stack for Stablecoins.",
+    introBlockOneTitle: "Traditional wallets are fundamentally flawed",
+    introBlockOneBody:
+      "Conventional web3 wallets fail to protect your USDT privacy and security at the source. Your wallet faces significant risks of contamination and privacy exposure.",
+    introBlockTwoTitle:
+      "D4U is more than a wallet — it's the architect of USDT order",
+    introBlockTwoBody:
+      "Powered by decentralized architecture, D4U hybrid network technology, and zero-knowledge proofs, D4U redefines how USDT should be used.",
+  },
+};
+
+let currentLanguage = "zh";
+
+function applyLanguage(language) {
+  currentLanguage = language;
+  document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    node.textContent = translations[language][node.dataset.i18n];
+  });
+
+  document.querySelectorAll("[data-i18n-aria]").forEach((node) => {
+    node.setAttribute("aria-label", translations[language][node.dataset.i18nAria]);
+  });
+
+  const langToggle = document.querySelector("[data-lang-toggle]");
+  if (langToggle) {
+    langToggle.textContent = translations[language].langToggle;
+  }
+}
+
+const langToggle = document.querySelector("[data-lang-toggle]");
+if (langToggle) {
+  langToggle.addEventListener("click", () => {
+    applyLanguage(currentLanguage === "zh" ? "en" : "zh");
+  });
+}
+
 const leadWord = document.querySelector("#lead-word");
 const targetWord = document.querySelector("#target-word");
 let index = 0;
