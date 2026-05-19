@@ -51,40 +51,42 @@
         </div>
       </section>
 
-      <section class="intro section" id="story" aria-labelledby="story-title">
-        <p class="section-kicker" data-i18n="story.kicker">Welcome to D4U</p>
-        <h2 id="story-title" data-i18n="story.title">
-          The Next-Gen Smart Account Infrastructure Stack for Stablecoins.
-        </h2>
-        <div class="split-copy">
-          <article>
-            <div class="story-visual story-risk" aria-hidden="true">
-              <div class="wallet-shell"></div>
-              <div class="leak-line leak-one"></div>
-              <div class="leak-line leak-two"></div>
-              <div class="risk-dot risk-dot-a"></div>
-              <div class="risk-dot risk-dot-b"></div>
-              <div class="exposure-ring"></div>
+      <section class="intro" id="story" aria-labelledby="story-title">
+        <div class="story-panel">
+          <div class="story-device" aria-hidden="true">
+            <div class="story-phone">
+              <span class="phone-notch"></span>
+              <span class="phone-cloud cloud-a"></span>
+              <span class="phone-cloud cloud-b"></span>
             </div>
-            <h3 data-i18n="story.problemTitle">传统钱包存在设计缺陷</h3>
-            <p data-i18n="story.problem">
-              传统 web3 钱包无法从根源保护你的 USDT 隐私和安全，钱包面临被污染与隐私暴露风险。
-            </p>
-          </article>
-          <article>
-            <div class="story-visual story-order" aria-hidden="true">
-              <div class="order-core">D4U</div>
-              <div class="order-lane lane-one"></div>
-              <div class="order-lane lane-two"></div>
-              <div class="proof-tile proof-a">ZK</div>
-              <div class="proof-tile proof-b">NET</div>
-              <div class="proof-tile proof-c">USDT</div>
+            <div class="story-privacy-card">
+              <span class="story-card-label">D4U Smart Account</span>
+              <span class="story-card-balance">USDT</span>
+              <span class="story-card-line line-a"></span>
+              <span class="story-card-line line-b"></span>
+              <span class="story-card-chip chip-safe">Safe</span>
+              <span class="story-card-chip chip-watch">Watch</span>
             </div>
-            <h3 data-i18n="story.solutionTitle">D4U 不只是钱包</h3>
-            <p data-i18n="story.solution">
-              得益于去中心化设计、D4U 混合网络技术和零知识证明，D4U 重新构建了 USDT 的使用秩序。
-            </p>
-          </article>
+            <div class="story-particle particle-a"></div>
+            <div class="story-particle particle-b"></div>
+          </div>
+          <div class="story-copy">
+            <p class="section-kicker" data-i18n="story.kicker">Welcome to D4U</p>
+            <h2 id="story-title" data-i18n="story.title">
+              The Next-Gen Smart Account Infrastructure Stack for Stablecoins.
+            </h2>
+            <div class="story-lines">
+              <h3 data-i18n="story.problemTitle">Traditional wallets are fundamentally flawed</h3>
+              <p data-i18n="story.problem">
+                Conventional web3 wallets fail to protect your USDT privacy and security at the source. Your wallet faces significant risks of contamination and privacy exposure.
+              </p>
+              <h3 data-i18n="story.solutionTitle">D4U is more than a wallet — it's the architect of USDT order</h3>
+              <p data-i18n="story.solution">
+                Powered by decentralized architecture, D4U hybrid network technology, and zero-knowledge proofs, D4U redefines how USDT should be used.
+              </p>
+            </div>
+            <a class="button button-ghost story-button" href="#download" data-i18n="story.button">Get D4U</a>
+          </div>
         </div>
       </section>
 
@@ -109,45 +111,89 @@
 
       <section class="privacy-action section" id="privacy-action" aria-labelledby="privacy-action-title">
         <div class="privacy-action-copy">
-          <p class="section-kicker" data-i18n="privacyAction.kicker">Privacy transfer demo</p>
-          <h2 id="privacy-action-title" data-i18n="privacyAction.title">把隐私转账过程，直接展示给用户看。</h2>
+          <p class="section-kicker" data-i18n="privacyAction.kicker">See Safety and Privacy in Action</p>
+          <h2 id="privacy-action-title" data-i18n="privacyAction.title">安全收款与隐私付款，一眼看清。</h2>
           <p data-i18n="privacyAction.copy">
-            两端聊天、端到端加密通道、USDT 转账卡片和隐私保护状态，在一个高可信的产品演示画面里完成。
+            两个核心 Demo 分别展示 D4U 如何隔离风险资金，以及如何隐藏 USDT 支付链路。
           </p>
         </div>
-        <div class="privacy-stage" aria-label="D4U privacy transfer in action">
-          <div class="privacy-orbit orbit-a"></div>
-          <div class="privacy-orbit orbit-b"></div>
-          <div class="privacy-beam"></div>
-          <img src="assets/privacy-action.png" alt="D4U privacy transfer demo between sender and receiver" />
-          <div class="privacy-chip chip-left" data-i18n="privacyAction.chipLeft">E2E Encrypted</div>
-          <div class="privacy-chip chip-right" data-i18n="privacyAction.chipRight">ZK Protected</div>
-          <div class="privacy-spark spark-a"></div>
-          <div class="privacy-spark spark-b"></div>
-          <div class="privacy-spark spark-c"></div>
+        <div class="demo-grid">
+          <article class="demo-card demo-safety">
+            <div class="demo-visual safety-visual" aria-hidden="true">
+              <div class="fund-source source-clean">Clean</div>
+              <div class="fund-source source-watch">Watch</div>
+              <div class="fund-source source-risk">Risk</div>
+              <div class="sentry-core">D4U<br />Sentry</div>
+              <div class="safety-lane lane-clean"></div>
+              <div class="safety-lane lane-watch"></div>
+              <div class="safety-lane lane-risk"></div>
+              <div class="zone zone-safe">Safe Zone</div>
+              <div class="zone zone-observe">Watch Zone</div>
+              <div class="zone zone-block">Isolation</div>
+            </div>
+            <div class="demo-copy">
+              <span data-i18n="privacyAction.safetyKicker">Safe receive</span>
+              <h3 data-i18n="privacyAction.safetyTitle">Receive USDT safely.</h3>
+              <p data-i18n="privacyAction.safetyCopy">Risky funds are detected on arrival and routed away from your main account.</p>
+            </div>
+          </article>
+          <article class="demo-card demo-privacy">
+            <div class="demo-visual privacy-stage" aria-label="D4U privacy transfer in action">
+              <div class="privacy-orbit orbit-a"></div>
+              <div class="privacy-orbit orbit-b"></div>
+              <div class="privacy-beam"></div>
+              <img src="assets/privacy-action.png" alt="D4U privacy transfer demo between sender and receiver" />
+              <div class="privacy-chip chip-left" data-i18n="privacyAction.chipLeft">E2E Encrypted</div>
+              <div class="privacy-chip chip-right" data-i18n="privacyAction.chipRight">ZK Protected</div>
+              <div class="privacy-spark spark-a"></div>
+              <div class="privacy-spark spark-b"></div>
+              <div class="privacy-spark spark-c"></div>
+            </div>
+            <div class="demo-copy">
+              <span data-i18n="privacyAction.privacyKicker">Private pay</span>
+              <h3 data-i18n="privacyAction.privacyTitle">Pay USDT privately.</h3>
+              <p data-i18n="privacyAction.privacyCopy">D4U Hybrid Network breaks visible links between sender, route, and recipient.</p>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="section" id="features" aria-labelledby="features-title">
-        <p class="section-kicker" data-i18n="features.kicker">Receive. Send. Safe & Save.</p>
-        <h2 id="features-title" data-i18n="features.title">一个专为 USDT 打造的隐私和安全的家。</h2>
+        <p class="section-kicker" data-i18n="features.kicker">D4U Features</p>
+        <h2 id="features-title" data-i18n="features.title">D4U Features</h2>
         <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-visual receive" aria-hidden="true">
-              <div class="visual-orbit"></div>
-              <div class="visual-phone">
-                <span class="phone-bar"></span>
-                <span class="risk-list risk-safe"></span>
-                <span class="risk-list risk-watch"></span>
-                <span class="risk-list risk-block"></span>
+          <article class="feature-card feature-sentry">
+            <div class="feature-visual sentry-filter" aria-label="D4U Sentry risk filtering animation">
+              <div class="asset asset-usdt"><span>₮</span><strong>USDT</strong></div>
+              <div class="asset asset-usdc"><span>$</span><strong>USDC</strong></div>
+              <div class="asset asset-dai"><span>D</span><strong>DAI</strong></div>
+              <svg class="sentry-pipes" viewBox="0 0 1000 360" preserveAspectRatio="none" role="img" aria-label="Funds flow through D4U Sentry and split by risk level">
+                <path class="pipe-track usdt-track" d="M110 78 H292 C368 78 354 148 438 148 H500" />
+                <path class="pipe-track usdc-track" d="M110 174 H500" />
+                <path class="pipe-track dai-track" d="M110 270 H292 C368 270 354 202 438 202 H500" />
+                <path class="pipe-track high-track" d="M500 132 H602 C692 132 658 78 752 78 H900" />
+                <path class="pipe-track medium-track" d="M500 174 H900" />
+                <path class="pipe-track low-track" d="M500 222 H602 C692 222 658 288 752 288 H900" />
+                <path class="pipe-flow usdt-flow" d="M110 78 H292 C368 78 354 148 438 148 H500" />
+                <path class="pipe-flow usdc-flow" d="M110 174 H500" />
+                <path class="pipe-flow dai-flow" d="M110 270 H292 C368 270 354 202 438 202 H500" />
+                <path class="pipe-flow high-flow" d="M500 132 H602 C692 132 658 78 752 78 H900" />
+                <path class="pipe-flow medium-flow" d="M500 174 H900" />
+                <path class="pipe-flow low-flow" d="M500 222 H602 C692 222 658 288 752 288 H900" />
+              </svg>
+              <div class="sentry-filter-core">
+                <strong>D4U<br />Sentry</strong>
+                <span>Risk Radar</span>
               </div>
-              <div class="visual-token token-in">U</div>
-              <div class="visual-shield"></div>
-              <div class="visual-vault" data-i18n="features.visualVault">隔离区</div>
+              <div class="risk-pool high-risk"><span>!</span><strong>High Risk</strong><small>Pool</small></div>
+              <div class="risk-pool medium-risk"><span>!</span><strong>Medium Risk</strong><small>Pool</small></div>
+              <div class="risk-pool low-risk"><span>✓</span><strong>Low Risk</strong><small>Pool</small></div>
+              <div class="filter-legend">
+                <span><i></i>Zero Knowledge</span>
+                <span><i></i>Risk Managed</span>
+                <span><i></i>Optimized Yield</span>
+              </div>
             </div>
-            <span class="card-index">01</span>
-            <h3 data-i18n="features.receiveTitle">安全收 U</h3>
-            <p data-i18n="features.receive">入账即扫描，风险资金自动隔离，收款流程保持清晰、可信、可控。</p>
           </article>
           <article class="feature-card">
             <div class="feature-visual send" aria-hidden="true">

@@ -65,24 +65,31 @@ const translations = {
     "hero.title": "下一代稳定币智能账户基础设施",
     "hero.lede": "以简洁克制的产品体验，承载 USDT 收付、隐私保护与资产分区所需的完整安全能力。",
     "story.kicker": "欢迎来到 D4U",
-    "story.title": "为稳定币打造的新一代智能账户基础设施。",
+    "story.title": "下一代稳定币智能账户基础设施体系",
     "story.problemTitle": "传统钱包存在设计缺陷",
-    "story.problem": "传统 Web3 钱包难以从源头保护 USDT 的隐私与安全，账户容易遭遇资金污染和链上身份暴露。",
-    "story.solutionTitle": "D4U 不只是钱包",
-    "story.solution": "依托去中心化架构、混合网络与零知识证明，D4U 为 USDT 收付重新建立清晰、可信的账户秩序。",
+    "story.problem": "传统 Web3 钱包无法从根源保护你的 USDT 隐私和安全，你的钱包拥有极大的被污染风险，以及隐私泄露风险。",
+    "story.solutionTitle": "D4U 不只是钱包，更是 USDT 秩序的构建者",
+    "story.solution": "得益于去中心化设计、D4U 混合网络技术和零知识证明技术，D4U 重新构建了 USDT 的使用秩序。",
+    "story.button": "下载 D4U",
     "metrics.users": "用户",
     "metrics.countries": "覆盖国家和地区",
     "metrics.secured": "累计保护资产",
     "metrics.daily": "日均处理规模",
-    "privacyAction.kicker": "隐私转账演示",
-    "privacyAction.title": "把隐私转账过程，直接展示给用户看。",
-    "privacyAction.copy": "两端聊天、端到端加密通道、USDT 转账卡片和隐私保护状态，在一个高可信的产品演示画面里完成。",
+    "privacyAction.kicker": "See Safety and Privacy in Action",
+    "privacyAction.title": "安全收款与隐私付款，一眼看清。",
+    "privacyAction.copy": "两个核心 Demo 分别展示 D4U 如何隔离风险资金，以及如何隐藏 USDT 支付链路。",
     "privacyAction.chipLeft": "端到端加密",
     "privacyAction.chipRight": "ZK 保护",
-    "features.kicker": "收款、转账、隐私支付",
-    "features.title": "一个专为 USDT 打造的隐私和安全的家。",
-    "features.receiveTitle": "安全收 U",
-    "features.receive": "入账即扫描，风险资金自动隔离，收款流程保持清晰、可信、可控。",
+    "privacyAction.safetyKicker": "安全收款",
+    "privacyAction.safetyTitle": "Receive USDT safely.",
+    "privacyAction.safetyCopy": "风险资金在入账瞬间被识别，并从主账户路径中隔离出去。",
+    "privacyAction.privacyKicker": "隐私付款",
+    "privacyAction.privacyTitle": "Pay USDT privately.",
+    "privacyAction.privacyCopy": "D4U Hybrid Network 打断发送方、路由与接收方之间的可见关联。",
+    "features.kicker": "D4U Features",
+    "features.title": "D4U Features",
+    "features.receiveTitle": "Monitoring your stablecoin as a sentry. Receive USDT safely.",
+    "features.receive": "红、棕、绿资金从左侧进入 D4U Sentry 系统，风险雷达实时过滤，并自动分配到对应风险区域。",
     "features.visualVault": "隔离区",
     "features.visualFee": "低费用",
     "features.visualInstant": "即时到账",
@@ -167,24 +174,31 @@ const translations = {
     "hero.title": "Next-generation smart account infrastructure for stablecoins.",
     "hero.lede": "A refined USDT account experience for receiving, sending, privacy protection, and secure asset partitioning.",
     "story.kicker": "Welcome to D4U",
-    "story.title": "The next-generation smart account infrastructure stack for stablecoins.",
-    "story.problemTitle": "Traditional wallets have design flaws",
-    "story.problem": "Conventional Web3 wallets struggle to protect USDT privacy and security at the source, leaving accounts exposed to tainted funds and onchain identity leakage.",
-    "story.solutionTitle": "D4U is more than a wallet",
-    "story.solution": "With decentralized architecture, hybrid networking, and zero-knowledge proofs, D4U rebuilds a cleaner, more trustworthy order for USDT accounts.",
+    "story.title": "The Next-Gen Smart Account Infrastructure Stack for Stablecoins.",
+    "story.problemTitle": "Traditional wallets are fundamentally flawed",
+    "story.problem": "Conventional web3 wallets fail to protect your USDT privacy and security at the source. Your wallet faces significant risks of contamination and privacy exposure.",
+    "story.solutionTitle": "D4U is more than a wallet — it's the architect of USDT order",
+    "story.solution": "Powered by decentralized architecture, D4U hybrid network technology, and zero-knowledge proofs, D4U redefines how USDT should be used.",
+    "story.button": "Get D4U",
     "metrics.users": "Users",
     "metrics.countries": "Supported countries",
     "metrics.secured": "Total value secured",
     "metrics.daily": "Daily processed",
-    "privacyAction.kicker": "Privacy transfer demo",
-    "privacyAction.title": "Show privacy transfers in action.",
-    "privacyAction.copy": "Two-sided chat, an end-to-end encrypted tunnel, USDT transfer cards, and privacy status cues come together in one high-trust product demo.",
+    "privacyAction.kicker": "See Safety and Privacy in Action",
+    "privacyAction.title": "Safety and privacy, shown in action.",
+    "privacyAction.copy": "Two core demos show how D4U isolates risky incoming funds and hides visible USDT payment links.",
     "privacyAction.chipLeft": "E2E Encrypted",
     "privacyAction.chipRight": "ZK Protected",
-    "features.kicker": "Receive. Send. Private Pay.",
-    "features.title": "One safe and private home for all your USDT.",
-    "features.receiveTitle": "Receive USDT safely",
-    "features.receive": "Scan at the moment funds arrive, isolate risk automatically, and keep every receipt clean and controlled.",
+    "privacyAction.safetyKicker": "Safe receive",
+    "privacyAction.safetyTitle": "Receive USDT safely.",
+    "privacyAction.safetyCopy": "Risky funds are detected on arrival and routed away from your main account.",
+    "privacyAction.privacyKicker": "Private pay",
+    "privacyAction.privacyTitle": "Pay USDT privately.",
+    "privacyAction.privacyCopy": "D4U Hybrid Network breaks visible links between sender, route, and recipient.",
+    "features.kicker": "D4U Features",
+    "features.title": "D4U Features",
+    "features.receiveTitle": "Monitoring your stablecoin as a sentry. Receive USDT safely.",
+    "features.receive": "Red, amber, and green flows enter D4U Sentry from the left. The risk radar filters funds in real time and routes them into the right risk zones.",
     "features.visualVault": "Isolated",
     "features.visualFee": "Low fee",
     "features.visualInstant": "Instant",
@@ -283,11 +297,25 @@ applyLanguage(currentLang);
 
 const revealTargets = [
   ...document.querySelectorAll(
-    ".section, .metrics, .trust-band, .privacy-stage, .split-copy article, .feature-card, .engine-card, .ecosystem-list article, .security-grid article, .quote-grid figure",
+    ".section, .intro, .metrics, .trust-band, .demo-card, .split-copy article, .feature-card, .engine-card, .ecosystem-list article, .security-grid article, .quote-grid figure",
   ),
 ];
 
 revealTargets.forEach((target) => target.classList.add("reveal"));
+
+let lastScrollY = window.scrollY;
+let scrollDirection = "down";
+
+window.addEventListener(
+  "scroll",
+  () => {
+    const currentScrollY = window.scrollY;
+    scrollDirection = currentScrollY > lastScrollY ? "down" : "up";
+    lastScrollY = Math.max(currentScrollY, 0);
+    document.body.dataset.scrollDirection = scrollDirection;
+  },
+  { passive: true },
+);
 
 function parseMetricValue(text) {
   const numeric = Number.parseFloat(text.replace(/[^0-9.]/g, ""));
@@ -333,17 +361,22 @@ function animateMetric(node) {
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-
-      if (entry.target.classList.contains("metrics")) {
-        entry.target.querySelectorAll(".metric strong").forEach(animateMetric);
+      const target = entry.target;
+      if (!entry.isIntersecting) {
+        target.classList.remove("is-visible");
+        return;
       }
 
-      revealObserver.unobserve(entry.target);
+      target.classList.toggle("reveal-from-below", scrollDirection === "down");
+      target.classList.toggle("reveal-from-above", scrollDirection === "up");
+      target.classList.add("is-visible");
+
+      if (target.classList.contains("metrics")) {
+        target.querySelectorAll(".metric strong").forEach(animateMetric);
+      }
     });
   },
-  { threshold: 0.16, rootMargin: "0px 0px -8% 0px" },
+  { threshold: 0.14, rootMargin: "-6% 0px -10% 0px" },
 );
 
 revealTargets.forEach((target) => revealObserver.observe(target));
@@ -372,7 +405,7 @@ if (!prefersReducedMotion) {
   });
 
   const tiltTargets = document.querySelectorAll(
-    ".privacy-stage, .feature-card, .engine-card, .split-copy article, .ecosystem-list article, .security-grid article, .quote-grid figure",
+    ".demo-card, .feature-card, .engine-card, .split-copy article, .ecosystem-list article, .security-grid article, .quote-grid figure",
   );
 
   tiltTargets.forEach((target) => {
