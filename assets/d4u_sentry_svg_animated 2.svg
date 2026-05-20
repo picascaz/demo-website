@@ -216,8 +216,7 @@
   <g class="centerPulse">
     <rect x="536" y="102" width="208" height="204" rx="17" fill="url(#centerGrad)"/>
     <text x="596" y="185" class="centerBig">D4U</text>
-    <text x="576" y="230" class="centerBig">Sentry</text>
-    <text x="602" y="259" class="centerSmall">Risk Radar</text>
+    <text x="590" y="230" class="centerBig">Vault</text>
   </g>
 
   <!-- right risk cards -->
@@ -227,8 +226,7 @@
     <path d="M978 96l15 27h-30l15-27z" fill="#fff"/>
     <circle cx="978" cy="120" r="2" fill="#E71920"/>
     <path d="M978 106v10" stroke="#E71920" stroke-width="3" stroke-linecap="round"/>
-    <text x="1011" y="109" class="riskTitle">High Risk</text>
-    <text x="1012" y="129" class="riskSub">Pool</text>
+    <text x="1011" y="119" class="riskTitle">Watch Zone</text>
   </g>
 
   <g class="riskPulse2">
@@ -237,8 +235,7 @@
     <path d="M978 190l15 27h-30l15-27z" fill="#fff"/>
     <circle cx="978" cy="214" r="2" fill="#F28A0A"/>
     <path d="M978 200v10" stroke="#F28A0A" stroke-width="3" stroke-linecap="round"/>
-    <text x="1011" y="202" class="riskTitle">Medium Risk</text>
-    <text x="1012" y="222" class="riskSub">Pool</text>
+    <text x="1011" y="210" class="riskTitle">Flow Zone</text>
   </g>
 
   <g class="riskPulse3">
@@ -246,8 +243,7 @@
     <rect x="957" y="276" width="42" height="42" rx="8" fill="#fff" opacity=".16"/>
     <path d="M978 282l16 7v9c0 12-8 19-16 23-8-4-16-11-16-23v-9l16-7z" fill="#fff"/>
     <path d="M970 299l6 6 11-13" stroke="#16A85C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="1011" y="295" class="riskTitle">Low Risk</text>
-    <text x="1012" y="315" class="riskSub">Pool</text>
+    <text x="1011" y="305" class="riskTitle">Core Reserve</text>
   </g>
 
 

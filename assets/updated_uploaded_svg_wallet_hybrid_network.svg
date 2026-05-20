@@ -1,0 +1,243 @@
+<svg width="1108" height="372" viewBox="0 0 1108 372" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glow filters -->
+    <filter id="goldGlow" x="-180%" y="-180%" width="460%" height="460%">
+      <feGaussianBlur stdDeviation="5" result="b1"/>
+      <feGaussianBlur stdDeviation="13" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="purpleCardGlow" x="-25%" y="-45%" width="150%" height="190%">
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#6f4dff" flood-opacity=".32"/>
+    </filter>
+
+    <filter id="orangeCardGlow" x="-25%" y="-45%" width="150%" height="190%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ff9900" flood-opacity=".36"/>
+    </filter>
+
+    <filter id="greenCardGlow" x="-25%" y="-45%" width="150%" height="190%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#00d084" flood-opacity=".36"/>
+    </filter>
+
+    <filter id="blueCardGlow" x="-25%" y="-45%" width="150%" height="190%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#2292ff" flood-opacity=".36"/>
+    </filter>
+
+    <linearGradient id="bgVignette" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1122"/>
+      <stop offset=".55" stop-color="#080C19"/>
+      <stop offset="1" stop-color="#0D1122"/>
+    </linearGradient>
+
+    <linearGradient id="walletCard" x1="148" y1="146" x2="393" y2="226" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4D3196"/>
+      <stop offset="1" stop-color="#271753"/>
+    </linearGradient>
+
+    <linearGradient id="centerCard" x1="522" y1="122" x2="703" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B8EE8"/>
+      <stop offset=".55" stop-color="#2255C0"/>
+      <stop offset="1" stop-color="#5A008D"/>
+    </linearGradient>
+
+    <linearGradient id="friendA" x1="858" y1="36" x2="1055" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D66B00"/>
+      <stop offset="1" stop-color="#E18408"/>
+    </linearGradient>
+
+    <linearGradient id="friendB" x1="858" y1="120" x2="1055" y2="194" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C96B00"/>
+      <stop offset="1" stop-color="#E48508"/>
+    </linearGradient>
+
+    <linearGradient id="whiteA" x1="858" y1="204" x2="1055" y2="278" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#078865"/>
+      <stop offset="1" stop-color="#047151"/>
+    </linearGradient>
+
+    <linearGradient id="whiteB" x1="858" y1="288" x2="1055" y2="362" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#168EE5"/>
+      <stop offset="1" stop-color="#244FC2"/>
+    </linearGradient>
+
+    <radialGradient id="gold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4a9"/>
+      <stop offset="40%" stop-color="#ffb623"/>
+      <stop offset="100%" stop-color="#a56000"/>
+    </radialGradient>
+
+    <!-- Paths used by animateMotion -->
+    <path id="routeIn" d="M393 186 C445 186 470 186 522 186"/>
+    <path id="routeA" d="M704 160 C760 158 788 73 858 73"/>
+    <path id="routeB" d="M704 178 C770 176 790 157 858 157"/>
+    <path id="routeC" d="M704 196 C770 198 790 241 858 241"/>
+    <path id="routeD" d="M704 214 C760 218 788 325 858 325"/>
+
+    <style>
+      .label { fill:#BBADEB; font:700 8px Inter, Arial, sans-serif; letter-spacing:2px; }
+      .txt { fill:#fff; font:800 16px Inter, Arial, sans-serif; }
+      .title { fill:#fff; font:800 15px Inter, Arial, sans-serif; }
+      .centerMain { fill:#fff; font:800 26px Inter, Arial, sans-serif; }
+      .centerSub { fill:#fff; font:700 20px Inter, Arial, sans-serif; }
+      .subOrange { fill:#F2C982; font:500 10px Inter, Arial, sans-serif; opacity:.8; }
+      .subGreen { fill:#78E0B8; font:500 10px Inter, Arial, sans-serif; opacity:.8; }
+      .tiny { fill:#777F93; font:700 8px Inter, Arial, sans-serif; letter-spacing:1.6px; opacity:.75; }
+      .line { stroke:#293044; stroke-width:1.2; fill:none; opacity:.9; }
+      .trail {
+        stroke:#ffb322;
+        stroke-width:2.4;
+        fill:none;
+        stroke-linecap:round;
+        stroke-dasharray:18 200;
+        filter:url(#goldGlow);
+        opacity:0;
+      }
+
+      .trail1 { animation: trailPulse 3s linear infinite; }
+      .trail2 { animation: trailPulse 3s linear infinite 1.0s; }
+      .trail3 { animation: trailPulse 3s linear infinite 1.18s; }
+      .trail4 { animation: trailPulse 3s linear infinite 1.36s; }
+      .trail5 { animation: trailPulse 3s linear infinite 1.54s; }
+
+      @keyframes trailPulse {
+        0%, 8%, 100% { opacity:0; stroke-dashoffset:190; }
+        18% { opacity:.95; }
+        42% { opacity:.55; stroke-dashoffset:0; }
+        55% { opacity:0; }
+      }
+
+      .energy {
+        fill:url(#gold);
+        filter:url(#goldGlow);
+      }
+
+      .energyStatic {
+        fill:url(#gold);
+        filter:url(#goldGlow);
+        animation: blink 2.2s ease-in-out infinite;
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity:.35; }
+        50% { opacity:1; }
+      }
+
+      .cardPulse { animation: cardPulse 3s ease-in-out infinite; transform-origin:center; }
+      @keyframes cardPulse {
+        0%,100% { transform:scale(1); }
+        50% { transform:scale(1.025); }
+      }
+    </style>
+  </defs>
+
+  <rect width="1108" height="372" fill="url(#bgVignette)"/>
+
+  <!-- left wallet card -->
+  <g filter="url(#purpleCardGlow)">
+    <rect x="148" y="146" width="245" height="80" rx="12" fill="url(#walletCard)" stroke="#6544bf"/>
+    <circle cx="181" cy="186" r="18" fill="#3C246F" stroke="#7E63D6"/>
+    <path d="M169 184h25c5 0 9 4 9 9v8h-34c-6 0-10-4-10-10v-15c0-6 4-10 10-10h28" stroke="#C5B7FF" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="190" cy="193" r="2.5" fill="#C5B7FF"/>
+    <text x="214" y="178" class="label">SOURCE WALLET</text>
+    <text x="214" y="200" class="txt">Your wallet</text>
+  </g>
+
+  <!-- base connector lines -->
+  <use href="#routeIn" class="line"/>
+  <use href="#routeA" class="line"/>
+  <use href="#routeB" class="line"/>
+  <use href="#routeC" class="line"/>
+  <use href="#routeD" class="line"/>
+
+  <!-- glowing path trails -->
+  <use href="#routeIn" class="trail trail1"/>
+  <use href="#routeA" class="trail trail2"/>
+  <use href="#routeB" class="trail trail3"/>
+  <use href="#routeC" class="trail trail4"/>
+  <use href="#routeD" class="trail trail5"/>
+
+  <!-- static connection dots -->
+  <circle class="energyStatic" cx="393" cy="186" r="3"/>
+  <circle class="energyStatic" cx="522" cy="186" r="4"/>
+  <circle class="energyStatic" cx="704" cy="186" r="4"/>
+  <circle class="energyStatic" cx="858" cy="73" r="3"/>
+  <circle class="energyStatic" cx="858" cy="157" r="3"/>
+  <circle class="energyStatic" cx="858" cy="241" r="3"/>
+  <circle class="energyStatic" cx="858" cy="325" r="3"/>
+
+  <!-- moving glowing particles -->
+  <circle r="5" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="0s"><mpath href="#routeIn"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="5" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="1.0s"><mpath href="#routeA"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite" begin="1.0s"/>
+  </circle>
+
+  <circle r="5" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="1.18s"><mpath href="#routeB"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite" begin="1.18s"/>
+  </circle>
+
+  <circle r="5" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="1.36s"><mpath href="#routeC"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite" begin="1.36s"/>
+  </circle>
+
+  <circle r="5" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="1.54s"><mpath href="#routeD"/></animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite" begin="1.54s"/>
+  </circle>
+
+  <!-- center card -->
+  <g filter="url(#orangeCardGlow)">
+    <rect x="522" y="122" width="181" height="128" rx="19" fill="#151428" stroke="#2C58B8" stroke-width="2"/>
+    <rect x="528" y="128" width="169" height="116" rx="13" fill="url(#centerCard)"/>
+    <text x="583" y="171" class="centerMain">D4U</text>
+    <text x="580" y="200" class="centerSub">Hybrid</text>
+    <text x="575" y="224" class="centerSub">Network</text>
+  </g>
+
+  <!-- right cards -->
+  <g filter="url(#orangeCardGlow)" class="cardPulse">
+    <rect x="858" y="36" width="197" height="74" rx="15" fill="#151428" stroke="#8B5413" stroke-width="2"/>
+    <rect x="864" y="42" width="185" height="62" rx="11" fill="url(#friendA)"/>
+    <circle cx="888" cy="73" r="14" fill="#fff" opacity=".18"/>
+    <circle cx="888" cy="68" r="5" stroke="#fff" stroke-width="2"/>
+    <path d="M878 85c3-9 17-9 20 0" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <text x="918" y="79" class="title">Friend A</text>
+  </g>
+
+  <g filter="url(#orangeCardGlow)" class="cardPulse">
+    <rect x="858" y="120" width="197" height="74" rx="15" fill="#151428" stroke="#8B5413" stroke-width="2"/>
+    <rect x="864" y="126" width="185" height="62" rx="11" fill="url(#friendB)"/>
+    <circle cx="888" cy="157" r="14" fill="#fff" opacity=".18"/>
+    <circle cx="888" cy="152" r="5" stroke="#fff" stroke-width="2"/>
+    <path d="M878 169c3-9 17-9 20 0" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <text x="918" y="163" class="title">Friend B</text>
+  </g>
+
+  <g filter="url(#greenCardGlow)" class="cardPulse">
+    <rect x="858" y="204" width="197" height="74" rx="15" fill="#0A2927" stroke="#026B5D" stroke-width="2"/>
+    <rect x="864" y="210" width="185" height="62" rx="11" fill="url(#whiteA)"/>
+    <circle cx="888" cy="241" r="14" fill="#fff" opacity=".18"/>
+    <path d="M888 225l14 6v8c0 10-7 16-14 20-7-4-14-10-14-20v-8l14-6z" fill="#fff"/>
+    <path d="M881 241l5 5 10-12" stroke="#16A85C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="918" y="247" class="title">Whitelist A</text>
+  </g>
+
+  <g filter="url(#blueCardGlow)" class="cardPulse">
+    <rect x="858" y="288" width="197" height="74" rx="15" fill="#0D1B36" stroke="#1E63C7" stroke-width="2"/>
+    <rect x="864" y="294" width="185" height="62" rx="11" fill="url(#whiteB)"/>
+    <circle cx="888" cy="325" r="14" fill="#fff" opacity=".18"/>
+    <path d="M888 309l14 6v8c0 10-7 16-14 20-7-4-14-10-14-20v-8l14-6z" fill="#fff"/>
+    <path d="M881 325l5 5 10-12" stroke="#1E63C7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="918" y="331" class="title">Whitelist B</text>
+  </g>
+</svg>
