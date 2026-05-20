@@ -1,7 +1,7 @@
 <svg width="1280" height="454" viewBox="0 0 1280 454" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="cardShadow" x="-20%" y="-30%" width="140%" height="160%">
-      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#8C96A8" flood-opacity=".28"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#64748B" flood-opacity=".12"/>
     </filter>
 
     <filter id="blueGlow" x="-80%" y="-80%" width="260%" height="260%">
@@ -28,10 +28,16 @@
       <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
+    <linearGradient id="bgVignette" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".55" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EFF6FF"/>
+    </linearGradient>
+
     <linearGradient id="panelBg" x1="92" y1="38" x2="1189" y2="417" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F8FAFC"/>
-      <stop offset=".55" stop-color="#EEF2F5"/>
-      <stop offset="1" stop-color="#F9FAFA"/>
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".55" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EFF6FF"/>
     </linearGradient>
 
     <linearGradient id="centerGrad" x1="536" y1="102" x2="744" y2="306" gradientUnits="userSpaceOnUse">
@@ -76,6 +82,23 @@
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
 
+    <symbol id="logo-usdt" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="16" fill="#26A17B"/>
+      <path fill="#fff" d="M17.922 17.383v-.002c-.11.008-.677.042-1.942.042-1.01 0-1.721-.03-1.971-.042v.003c-3.888-.171-6.79-.848-6.79-1.658 0-.809 2.902-1.486 6.79-1.66v2.644c.254.018 1.006.054 1.984.054 1.012 0 1.768-.038 1.984-.054v-2.643c3.888.173 6.789.85 6.789 1.658 0 .81-2.902 1.485-6.789 1.657m0-3.677v-2.366a59.14 59.14 0 0 0-1.984-.054c-1.012 0-1.768.037-1.984.054v2.365c-3.179.145-5.579 1.006-5.579 1.916 0 .909 2.4 1.771 5.579 1.916v3.876a59.15 59.15 0 0 0 1.984.054c1.012 0 1.768-.037 1.984-.054v-3.876c3.179-.145 5.579-1.006 5.579-1.916 0-.91-2.401-1.771-5.579-1.916"/>
+    </symbol>
+
+    <symbol id="logo-usdc" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="16" fill="#2775CA"/>
+      <path fill="#fff" d="M20.8 18.5c0-2.3-1.4-3.1-4.1-3.4-2-.2-2.4-.8-2.4-1.5 0-.8.7-1.3 1.9-1.3 1.1 0 1.7.5 2 1.2h1.8c-.2-1.8-1.6-2.9-3.6-3V9h-1.6v1.2c-1.8.3-3.2 1.5-3.2 3.3 0 2.2 1.4 3 4 3.2 2 .3 2.5.8 2.5 1.6 0 .9-.8 1.4-2 1.4-1.6 0-2.3-.7-2.6-1.5h-1.8c.3 1.9 1.7 3 4 3.1V23h1.6v-1.2c2-.3 3.4-1.5 3.4-3.3z"/>
+    </symbol>
+
+    <symbol id="logo-dai" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="16" fill="#F5AC37"/>
+      <path fill="#fff" d="M11.2 8.2h4.4c4.7 0 7.8 2.9 7.8 7.6s-3.1 7.6-7.8 7.6h-4.4V8.2zm4 12.1c2.9 0 4.7-1.7 4.7-4.5s-1.8-4.5-4.7-4.5h-1.9v9h1.9z"/>
+      <rect fill="#fff" x="20.1" y="10.2" width="2.3" height="11.6" rx=".4"/>
+      <rect fill="#fff" x="23.6" y="10.2" width="2.3" height="11.6" rx=".4"/>
+    </symbol>
+
     <!-- SVG paths -->
     <path id="tealPath" d="M199 103 C280 103 343 99 395 104 C447 109 446 155 520 164 L536 164"/>
     <path id="bluePath" d="M199 199 C315 199 424 199 536 199"/>
@@ -91,9 +114,9 @@
       .riskSub { fill:#fff; font:500 14px Inter, Arial, sans-serif; opacity:.92; }
       .centerBig { fill:#fff; font:800 43px Inter, Arial, sans-serif; }
       .centerSmall { fill:#fff; font:500 16px Inter, Arial, sans-serif; }
-      .pipeBase { stroke-width:22; fill:none; stroke-linecap:round; opacity:.52; }
-      .pipeInner { stroke-width:10; fill:none; stroke-linecap:round; opacity:.95; }
-      .pipeHighlight { stroke:#fff; stroke-width:2; fill:none; stroke-linecap:round; opacity:.35; }
+      .pipeBase { stroke-width:14; fill:none; stroke-linecap:round; opacity:.22; }
+      .pipeInner { stroke-width:6; fill:none; stroke-linecap:round; opacity:.72; }
+      .pipeHighlight { stroke:#fff; stroke-width:1.5; fill:none; stroke-linecap:round; opacity:.25; }
       .spark { fill:url(#whiteSpark); opacity:0; }
       .flow { fill:#fff; opacity:0; filter:url(#blueGlow); }
       .lineFlow { stroke:#fff; stroke-width:3; fill:none; stroke-linecap:round; stroke-dasharray:22 260; opacity:0; }
@@ -127,8 +150,8 @@
 
       .centerPulse { animation:centerPulse 3s ease-in-out infinite; transform-origin:640px 204px; }
       @keyframes centerPulse {
-        0%,100% { transform:scale(1); filter: drop-shadow(0 18px 28px rgba(43,69,144,.28));}
-        50% { transform:scale(1.018); filter: drop-shadow(0 22px 34px rgba(43,69,144,.38));}
+        0%,100% { transform:scale(1); filter: drop-shadow(0 10px 18px rgba(37,99,235,.14));}
+        50% { transform:scale(1.018); filter: drop-shadow(0 14px 24px rgba(37,99,235,.2));}
       }
 
       .riskPulse1 { animation: riskPulse 3s ease-in-out infinite 1.35s; transform-origin:1048px 112px; }
@@ -141,8 +164,7 @@
     </style>
   </defs>
 
-  <rect width="1280" height="454" fill="#E9EEF2"/>
-  <rect x="91" y="37" width="1098" height="381" rx="23" fill="url(#panelBg)" filter="url(#cardShadow)"/>
+  <rect width="1280" height="454" rx="16" fill="url(#bgVignette)" stroke="#E2E8F0" stroke-width="1"/>
 
   <!-- pipes base -->
   <use href="#tealPath" class="pipeBase" stroke="#27B7B1"/>
@@ -198,56 +220,56 @@
 
   <!-- left token icons -->
   <g>
-    <rect x="140" y="76" width="59" height="59" rx="11" fill="url(#tokenTeal)" filter="url(#blueGlow)"/>
+    <rect x="140" y="76" width="59" height="59" rx="11" fill="url(#tokenTeal)" filter="url(#blueGlow)" stroke="#FFFFFF" stroke-width="2"/>
     <path d="M154 93h31M170 94v27M158 101c9 4 25 4 33 0M158 111c9-4 25-4 33 0" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
     <text x="147" y="154" class="tokenText">USDT</text>
 
-    <rect x="140" y="170" width="59" height="59" rx="11" fill="url(#tokenBlue)" filter="url(#blueGlow)"/>
+    <rect x="140" y="170" width="59" height="59" rx="11" fill="url(#tokenBlue)" filter="url(#blueGlow)" stroke="#FFFFFF" stroke-width="2"/>
     <circle cx="169.5" cy="199.5" r="19" stroke="#fff" stroke-width="3"/>
     <path d="M174 188c-13-2-15 12 0 11 13 1 11 14-2 13M170 184v31" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
     <text x="147" y="248" class="tokenText">USDC</text>
 
-    <rect x="140" y="264" width="59" height="59" rx="11" fill="url(#tokenGold)" filter="url(#goldGlow)"/>
+    <rect x="140" y="264" width="59" height="59" rx="11" fill="url(#tokenGold)" filter="url(#goldGlow)" stroke="#FFFFFF" stroke-width="2"/>
     <path d="M154 291h14l9 16h-14l-9-16zm23 0h12v16h-12z" fill="#fff"/>
     <text x="154" y="342" class="tokenText">DAI</text>
   </g>
 
   <!-- center block -->
   <g class="centerPulse">
+    <rect x="530" y="96" width="220" height="216" rx="19" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
     <rect x="536" y="102" width="208" height="204" rx="17" fill="url(#centerGrad)"/>
     <text x="596" y="185" class="centerBig">D4U</text>
-    <text x="576" y="230" class="centerBig">Sentry</text>
-    <text x="602" y="259" class="centerSmall">Risk Radar</text>
+    <text x="590" y="230" class="centerBig">Vault</text>
   </g>
 
   <!-- right risk cards -->
   <g class="riskPulse1">
-    <rect x="943" y="75" width="211" height="74" rx="12" fill="url(#redCard)" filter="url(#redGlow)"/>
+    <rect x="943" y="75" width="211" height="74" rx="15" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
+    <rect x="949" y="81" width="199" height="62" rx="11" fill="url(#redCard)"/>
     <rect x="957" y="90" width="42" height="42" rx="8" fill="#fff" opacity=".16"/>
     <path d="M978 96l15 27h-30l15-27z" fill="#fff"/>
     <circle cx="978" cy="120" r="2" fill="#E71920"/>
     <path d="M978 106v10" stroke="#E71920" stroke-width="3" stroke-linecap="round"/>
-    <text x="1011" y="109" class="riskTitle">High Risk</text>
-    <text x="1012" y="129" class="riskSub">Pool</text>
+    <text x="1011" y="119" class="riskTitle">Watch Zone</text>
   </g>
 
   <g class="riskPulse2">
-    <rect x="943" y="168" width="211" height="74" rx="12" fill="url(#orangeCard)" filter="url(#goldGlow)"/>
+    <rect x="943" y="168" width="211" height="74" rx="15" fill="#FFFFFF" stroke="#FDBA74" stroke-width="2"/>
+    <rect x="949" y="174" width="199" height="62" rx="11" fill="url(#orangeCard)"/>
     <rect x="957" y="183" width="42" height="42" rx="8" fill="#fff" opacity=".16"/>
     <path d="M978 190l15 27h-30l15-27z" fill="#fff"/>
     <circle cx="978" cy="214" r="2" fill="#F28A0A"/>
     <path d="M978 200v10" stroke="#F28A0A" stroke-width="3" stroke-linecap="round"/>
-    <text x="1011" y="202" class="riskTitle">Medium Risk</text>
-    <text x="1012" y="222" class="riskSub">Pool</text>
+    <text x="1011" y="210" class="riskTitle">Flow Zone</text>
   </g>
 
   <g class="riskPulse3">
-    <rect x="943" y="261" width="211" height="74" rx="12" fill="url(#greenCard)" filter="url(#greenGlow)"/>
+    <rect x="943" y="261" width="211" height="74" rx="15" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <rect x="949" y="267" width="199" height="62" rx="11" fill="url(#greenCard)"/>
     <rect x="957" y="276" width="42" height="42" rx="8" fill="#fff" opacity=".16"/>
     <path d="M978 282l16 7v9c0 12-8 19-16 23-8-4-16-11-16-23v-9l16-7z" fill="#fff"/>
     <path d="M970 299l6 6 11-13" stroke="#16A85C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="1011" y="295" class="riskTitle">Low Risk</text>
-    <text x="1012" y="315" class="riskSub">Pool</text>
+    <text x="1011" y="305" class="riskTitle">Core Reserve</text>
   </g>
 
 

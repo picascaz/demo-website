@@ -28,9 +28,9 @@
     </filter>
 
     <linearGradient id="bgVignette" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0D1122"/>
-      <stop offset=".55" stop-color="#080C19"/>
-      <stop offset="1" stop-color="#0D1122"/>
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".55" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EFF6FF"/>
     </linearGradient>
 
     <linearGradient id="walletCard" x1="148" y1="146" x2="393" y2="226" gradientUnits="userSpaceOnUse">
@@ -85,8 +85,8 @@
       .centerSub { fill:#fff; font:700 20px Inter, Arial, sans-serif; }
       .subOrange { fill:#F2C982; font:500 10px Inter, Arial, sans-serif; opacity:.8; }
       .subGreen { fill:#78E0B8; font:500 10px Inter, Arial, sans-serif; opacity:.8; }
-      .tiny { fill:#777F93; font:700 8px Inter, Arial, sans-serif; letter-spacing:1.6px; opacity:.75; }
-      .line { stroke:#293044; stroke-width:1.2; fill:none; opacity:.9; }
+      .tiny { fill:#64748B; font:700 8px Inter, Arial, sans-serif; letter-spacing:1.6px; opacity:.85; }
+      .line { stroke:#CBD5E1; stroke-width:1.4; fill:none; opacity:1; }
       .trail {
         stroke:#ffb322;
         stroke-width:2.4;
@@ -134,7 +134,7 @@
     </style>
   </defs>
 
-  <rect width="1108" height="372" fill="url(#bgVignette)"/>
+  <rect width="1108" height="372" rx="16" fill="url(#bgVignette)" stroke="#E2E8F0" stroke-width="1"/>
 
   <!-- left wallet card -->
   <g filter="url(#purpleCardGlow)">
@@ -197,7 +197,7 @@
 
   <!-- center card -->
   <g filter="url(#orangeCardGlow)">
-    <rect x="522" y="122" width="181" height="128" rx="19" fill="#151428" stroke="#2C58B8" stroke-width="2"/>
+    <rect x="522" y="122" width="181" height="128" rx="19" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
     <rect x="528" y="128" width="169" height="116" rx="13" fill="url(#centerCard)"/>
     <text x="583" y="171" class="centerMain">D4U</text>
     <text x="580" y="200" class="centerSub">Hybrid</text>
@@ -206,7 +206,7 @@
 
   <!-- right cards -->
   <g filter="url(#orangeCardGlow)" class="cardPulse">
-    <rect x="858" y="36" width="197" height="74" rx="15" fill="#151428" stroke="#8B5413" stroke-width="2"/>
+    <rect x="858" y="36" width="197" height="74" rx="15" fill="#FFFFFF" stroke="#FDBA74" stroke-width="2"/>
     <rect x="864" y="42" width="185" height="62" rx="11" fill="url(#friendA)"/>
     <circle cx="888" cy="73" r="14" fill="#fff" opacity=".18"/>
     <circle cx="888" cy="68" r="5" stroke="#fff" stroke-width="2"/>
@@ -215,7 +215,7 @@
   </g>
 
   <g filter="url(#orangeCardGlow)" class="cardPulse">
-    <rect x="858" y="120" width="197" height="74" rx="15" fill="#151428" stroke="#8B5413" stroke-width="2"/>
+    <rect x="858" y="120" width="197" height="74" rx="15" fill="#FFFFFF" stroke="#FDBA74" stroke-width="2"/>
     <rect x="864" y="126" width="185" height="62" rx="11" fill="url(#friendB)"/>
     <circle cx="888" cy="157" r="14" fill="#fff" opacity=".18"/>
     <circle cx="888" cy="152" r="5" stroke="#fff" stroke-width="2"/>
@@ -224,7 +224,7 @@
   </g>
 
   <g filter="url(#greenCardGlow)" class="cardPulse">
-    <rect x="858" y="204" width="197" height="74" rx="15" fill="#0A2927" stroke="#026B5D" stroke-width="2"/>
+    <rect x="858" y="204" width="197" height="74" rx="15" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
     <rect x="864" y="210" width="185" height="62" rx="11" fill="url(#whiteA)"/>
     <circle cx="888" cy="241" r="14" fill="#fff" opacity=".18"/>
     <path d="M888 225l14 6v8c0 10-7 16-14 20-7-4-14-10-14-20v-8l14-6z" fill="#fff"/>
@@ -233,7 +233,7 @@
   </g>
 
   <g filter="url(#blueCardGlow)" class="cardPulse">
-    <rect x="858" y="288" width="197" height="74" rx="15" fill="#0D1B36" stroke="#1E63C7" stroke-width="2"/>
+    <rect x="858" y="288" width="197" height="74" rx="15" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
     <rect x="864" y="294" width="185" height="62" rx="11" fill="url(#whiteB)"/>
     <circle cx="888" cy="325" r="14" fill="#fff" opacity=".18"/>
     <path d="M888 309l14 6v8c0 10-7 16-14 20-7-4-14-10-14-20v-8l14-6z" fill="#fff"/>

@@ -24,9 +24,15 @@
     </filter>
 
     <linearGradient id="bgVignette" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0D1122"/>
-      <stop offset=".55" stop-color="#080C19"/>
-      <stop offset="1" stop-color="#0D1122"/>
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".55" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EFF6FF"/>
+    </linearGradient>
+
+    <linearGradient id="sweepFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#DBEAFE" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
 
     <linearGradient id="purpleCard" x1="148" y1="60" x2="393" y2="118" gradientUnits="userSpaceOnUse">
@@ -63,8 +69,8 @@
       .title { fill:#fff; font:800 15px Inter, Arial, sans-serif; }
       .subOrange { fill:#F2C982; font:500 10px Inter, Arial, sans-serif; opacity:.8; }
       .subGreen { fill:#78E0B8; font:500 10px Inter, Arial, sans-serif; opacity:.8; }
-      .tiny { fill:#777F93; font:700 8px Inter, Arial, sans-serif; letter-spacing:1.6px; opacity:.75; }
-      .line { stroke:#293044; stroke-width:1.2; fill:none; opacity:.9; }
+      .tiny { fill:#64748B; font:700 8px Inter, Arial, sans-serif; letter-spacing:1.6px; opacity:.85; }
+      .line { stroke:#CBD5E1; stroke-width:1.4; fill:none; opacity:1; }
       .trail {
         stroke:#ffb322;
         stroke-width:2.4;
@@ -106,7 +112,7 @@
       }
 
       .scanLine {
-        opacity:.08;
+        opacity:.45;
         animation: bgScan 3s linear infinite;
       }
 
@@ -117,7 +123,7 @@
     </style>
   </defs>
 
-  <rect width="1108" height="372" fill="url(#bgVignette)"/>
+  <rect width="1108" height="372" rx="16" fill="url(#bgVignette)" stroke="#E2E8F0" stroke-width="1"/>
 
   <!-- subtle background horizontal scan texture -->
   <g class="scanLine">
@@ -226,7 +232,7 @@
 
   <!-- center card -->
   <g filter="url(#orangeCardGlow)">
-    <rect x="522" y="147" width="181" height="96" rx="19" fill="#151428" stroke="#8B5413" stroke-width="2"/>
+    <rect x="522" y="147" width="181" height="96" rx="19" fill="#FFFFFF" stroke="#FDBA74" stroke-width="2"/>
     <rect x="528" y="153" width="169" height="84" rx="13" fill="url(#orangeCard)"/>
     <circle cx="612" cy="173" r="7" fill="#A95E00" stroke="#F5BA24"/>
     <path d="M608.8 172.8l2.2 2.2 4.1-5" stroke="#F8C84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -238,7 +244,7 @@
 
   <!-- right card -->
   <g filter="url(#greenCardGlow)">
-    <rect x="858" y="147" width="197" height="96" rx="19" fill="#0A2927" stroke="#026B5D" stroke-width="2"/>
+    <rect x="858" y="147" width="197" height="96" rx="19" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
     <rect x="864" y="153" width="185" height="84" rx="13" fill="url(#greenCard)"/>
     <circle cx="952" cy="173" r="7" fill="#006E51" stroke="#00D084"/>
     <path d="M948.8 172.8l2.2 2.2 4.1-5" stroke="#0DE68F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
