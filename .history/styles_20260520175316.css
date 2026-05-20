@@ -140,20 +140,27 @@ a {
   display: grid;
   width: 36px;
   height: 36px;
-  overflow: hidden;
   place-items: center;
   border: 1px solid rgba(96, 165, 250, 0.28);
   border-radius: 11px;
-  background: #fff;
+  color: var(--blue-deep);
+  background: linear-gradient(
+    135deg,
+    rgba(219, 234, 254, 0.95),
+    rgba(224, 242, 254, 0.85)
+  );
   box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
   transition: transform 0.4s var(--motion-ease);
 }
 
-.brand-mark img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.brand-mark svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
 .brand-text {
@@ -1633,28 +1640,23 @@ body.nav-open {
 
 .compare-table-wrap {
   overflow-x: auto;
-  border: 1px solid rgba(37, 99, 235, 0.12);
-  border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96)),
-    var(--panel);
-  box-shadow:
-    0 24px 64px rgba(15, 23, 42, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: 0 20px 56px var(--shadow-md);
   -webkit-overflow-scrolling: touch;
 }
 
 .compare-table {
   width: 100%;
-  min-width: 820px;
-  border-collapse: separate;
-  border-spacing: 0;
+  min-width: 720px;
+  border-collapse: collapse;
 }
 
 .compare-table th,
 .compare-table td {
-  padding: 18px 14px;
-  border-bottom: 1px solid var(--line);
+  padding: 18px 16px;
+  border: 1px solid var(--line-strong);
   color: var(--ink);
   font-size: 14px;
   line-height: 1.4;
@@ -1663,136 +1665,34 @@ body.nav-open {
 }
 
 .compare-table thead th {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  padding: 22px 14px 18px;
-  border-bottom: 1px solid rgba(37, 99, 235, 0.12);
-  font-weight: 700;
-  background: linear-gradient(180deg, #f8fbff 0%, #f1f5f9 100%);
-}
-
-.compare-feature-head {
-  min-width: 168px;
-  padding-left: 24px !important;
-  color: var(--muted);
-  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.compare-brand-head {
-  min-width: 108px;
-}
-
-.compare-brand-label {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-
-.compare-brand-logo {
-  display: block;
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1);
-}
-
-.compare-brand-label span:last-child {
-  color: var(--ink-secondary);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-.compare-col-d4u {
-  position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(219, 234, 254, 0.55),
-    rgba(239, 246, 255, 0.35)
-  );
-  box-shadow: inset 1px 0 0 rgba(37, 99, 235, 0.12),
-    inset -1px 0 0 rgba(37, 99, 235, 0.12);
-}
-
-.compare-brand-head.compare-col-d4u {
-  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
-}
-
-.compare-brand-head.compare-col-d4u .compare-brand-label span:last-child {
-  color: var(--blue-deep);
-}
-
-.compare-brand-head.compare-col-d4u .compare-brand-logo {
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+  background: var(--panel-strong);
 }
 
 .compare-table tbody th {
-  position: sticky;
-  left: 0;
-  z-index: 1;
-  min-width: 168px;
-  padding-left: 24px;
-  padding-right: 20px;
-  color: var(--ink);
   font-weight: 700;
   text-align: left;
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 8px 0 18px rgba(15, 23, 42, 0.04);
+  background: var(--panel-muted);
 }
 
-.compare-table tbody tr:last-child th,
-.compare-table tbody tr:last-child td {
-  border-bottom: none;
+.compare-table tbody td {
+  background: var(--bg-muted);
 }
 
-.compare-table tbody tr:hover td,
-.compare-table tbody tr:hover th {
-  background-color: rgba(248, 250, 252, 0.98);
+.mark-yes,
+.mark-no {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.compare-table tbody tr:hover .compare-col-d4u {
-  background: linear-gradient(
-    180deg,
-    rgba(219, 234, 254, 0.72),
-    rgba(239, 246, 255, 0.52)
-  );
+.mark-yes {
+  color: var(--ink);
 }
 
-.compare-mark {
-  display: inline-grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border-radius: 999px;
-}
-
-.compare-mark svg {
-  width: 14px;
-  height: 14px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2.4;
-}
-
-.compare-mark-yes {
-  color: #fff;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.28);
-}
-
-.compare-mark-no {
-  color: var(--muted-light);
-  background: #eef2f7;
-  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.06);
+.mark-no {
+  color: var(--muted);
 }
 
 .trust-section {
@@ -1825,12 +1725,19 @@ body.nav-open {
 }
 
 .trust-copy h2 {
-  margin: 0 0 36px;
+  margin: 0 0 14px;
   color: var(--ink);
   font-size: clamp(32px, 4vw, 44px);
   font-weight: 900;
   line-height: 1.12;
   letter-spacing: -0.02em;
+}
+
+.trust-subtitle {
+  margin: 0 0 36px;
+  color: var(--muted);
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.55;
 }
 
 .trust-list {
@@ -2276,23 +2183,10 @@ body.nav-open {
 }
 
 .footer-logo {
-  display: inline-flex;
-  gap: 12px;
-  align-items: center;
   color: var(--ink);
   font-size: 28px;
   font-weight: 900;
   text-decoration: none;
-}
-
-.footer-logo img {
-  display: block;
-  width: 44px;
-  height: 44px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.14);
 }
 
 .footer-brand p {
@@ -2319,10 +2213,14 @@ body.nav-open {
   background: var(--panel);
 }
 
-.footer-social img {
-  display: block;
+.footer-social svg {
   width: 18px;
   height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
 .footer-col h3 {
@@ -3406,6 +3304,10 @@ body.nav-open {
     padding: 36px 28px;
   }
 
+  .trust-subtitle {
+    margin-bottom: 28px;
+  }
+
   .trust-visual {
     min-height: 280px;
   }
@@ -3826,38 +3728,18 @@ body.nav-open {
   }
 
   .compare-table {
-    min-width: 720px;
+    min-width: 640px;
   }
 
   .compare-table th,
   .compare-table td {
-    padding: 14px 10px;
+    padding: 12px 10px;
     font-size: 12px;
   }
 
-  .compare-feature-head,
-  .compare-table tbody th {
-    min-width: 132px;
-    padding-left: 16px !important;
-  }
-
-  .compare-brand-logo {
-    width: 28px;
-    height: 28px;
-  }
-
-  .compare-brand-label span:last-child {
-    font-size: 11px;
-  }
-
-  .compare-mark {
-    width: 26px;
-    height: 26px;
-  }
-
-  .compare-mark svg {
-    width: 12px;
-    height: 12px;
+  .mark-yes,
+  .mark-no {
+    font-size: 16px;
   }
 
   .ecosystem-item {

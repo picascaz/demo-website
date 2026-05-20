@@ -20,7 +20,9 @@
       <div class="header-bar">
         <a class="brand" href="#" data-i18n-aria="brandHome">
           <span class="brand-mark" aria-hidden="true">
-            <img src="./assets/coin/d4u.png" alt="" width="36" height="36" />
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z" />
+            </svg>
           </span>
           <span class="brand-text">D4U</span>
         </a>
@@ -91,11 +93,9 @@
             <h1 id="hero-title">
               <span class="hero-title-row">
                 <span id="lead-word">Defense</span>
-              </span>
-              <span class="">
                 <span class="divider" data-i18n="heroDivider">For</span>
-                <span class="hero-title-accent" id="target-word">USDT</span>
               </span>
+              <span class="hero-title-accent" id="target-word">USDT</span>
             </h1>
 
             <p class="hero-subtitle" data-i18n="heroSubtitle">
@@ -124,17 +124,61 @@
           </div>
 
           <div class="hero-panel">
-            <figure class="hero-visual">
-              <img
-                class="hero-visual-image"
-                src="./assets/home.png"
-                alt="D4U wallet app preview"
-                width="390"
-                height="844"
-                loading="eager"
-                decoding="async"
-              />
-            </figure>
+            <div class="hero-orbit" aria-hidden="true">
+              <div class="hero-orbit-ring ring-one"></div>
+              <div class="hero-orbit-ring ring-two"></div>
+              <div class="hero-orbit-ring ring-three"></div>
+              <div class="hero-shield-core">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z"
+                  />
+                </svg>
+                <span>USDT</span>
+              </div>
+            </div>
+
+            <div class="wallet-preview">
+              <div class="wallet-card">
+                <div class="wallet-card-head">
+                  <span data-i18n="heroWalletBalance">总余额</span>
+                  <strong data-i18n="heroWalletProtected">已保护</strong>
+                </div>
+                <div class="wallet-balance">$98,546.50</div>
+                <div class="wallet-change" data-i18n="heroWalletChange">
+                  今日 +4.32%
+                </div>
+                <div class="wallet-actions">
+                  <span data-i18n="heroWalletSend">发送</span>
+                  <span data-i18n="heroWalletReceive">接收</span>
+                  <span data-i18n="heroWalletSafe">安全</span>
+                </div>
+                <div class="asset-list">
+                  <div class="asset-row">
+                    <span>USDT</span>
+                    <strong>42,800</strong>
+                  </div>
+                  <div class="asset-row">
+                    <span>USDC</span>
+                    <strong>18,420</strong>
+                  </div>
+                  <div class="asset-row">
+                    <span>DAI</span>
+                    <strong>9,650</strong>
+                  </div>
+                </div>
+                <div class="swap-toast" data-i18n="heroWalletToast">
+                  风险路线已清除
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-float hero-float-top" data-i18n="heroFloatSafe">
+              隐私路径已保护
+            </div>
+            <div class="hero-float hero-float-bottom" data-i18n="heroFloatRisk">
+              风险已清除
+            </div>
           </div>
         </div>
       </section>
@@ -252,109 +296,9 @@
         </div>
       </section>
 
-      <!-- <section class="demo-section" aria-labelledby="demo-title">
-        <h2 id="demo-title" data-i18n="demoTitle">安全与隐私，真实可见</h2>
-        <div class="demo-grid">
-          <article class="demo-card">
-            <div class="demo-phone">
-              <div class="demo-topbar">
-                <span></span>
-                <strong data-i18n="demoPayTopbar">隐私付款</strong>
-                <span></span>
-              </div>
-              <div class="chat-thread" data-chat-demo>
-                <div
-                  class="chat-bubble incoming"
-                  data-chat-step
-                  data-i18n="demoPayChat1"
-                >
-                  向 Alex 发送 320 USDT？
-                </div>
-                <div
-                  class="chat-bubble outgoing"
-                  data-chat-step
-                  data-i18n="demoPayChat2"
-                >
-                  隐藏发送地址与付款路径。
-                </div>
-                <div
-                  class="chat-bubble system"
-                  data-chat-step
-                  data-i18n="demoPayChat3"
-                >
-                  隐私路径已由 D4U 保护。
-                </div>
-                <div class="transfer-card" data-chat-step>
-                  <span data-i18n="demoPayCardLabel">隐私付款</span>
-                  <strong>320 USDT</strong>
-                  <small data-i18n="demoPayCardSmall">隐私路径已确认。</small>
-                </div>
-                <div class="typing-indicator" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-            </div>
-            <h3 data-i18n="demoOneTitle">隐私付款</h3>
-            <p data-i18n="demoOneBody">
-              付款路径与地址信息被保护，减少隐私暴露。
-            </p>
-          </article>
-
-          <article class="demo-card">
-            <div class="demo-phone">
-              <div class="demo-topbar">
-                <span></span>
-                <strong data-i18n="demoReceiveTopbar">安全收款</strong>
-                <span></span>
-              </div>
-              <div class="chat-thread" data-chat-demo>
-                <div
-                  class="chat-bubble incoming"
-                  data-chat-step
-                  data-i18n="demoReceiveChat1"
-                >
-                  检测到 1,280 USDT 入账。
-                </div>
-                <div
-                  class="chat-bubble outgoing"
-                  data-chat-step
-                  data-i18n="demoReceiveChat2"
-                >
-                  收款前先检查污染风险。
-                </div>
-                <div
-                  class="chat-bubble system"
-                  data-chat-step
-                  data-i18n="demoReceiveChat3"
-                >
-                  地址风险已清除，可安全接收。
-                </div>
-                <div class="transfer-card safe" data-chat-step>
-                  <span data-i18n="demoReceiveCardLabel">安全收款</span>
-                  <strong data-i18n="demoReceiveCardStrong">已验证</strong>
-                  <small data-i18n="demoReceiveCardSmall"
-                    >来源风险已清除。</small
-                  >
-                </div>
-                <div class="typing-indicator" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-            </div>
-            <h3 data-i18n="demoTwoTitle">安全收款</h3>
-            <p data-i18n="demoTwoBody">
-              收款前识别风险来源，降低钱包污染风险。
-            </p>
-          </article>
-        </div>
-      </section>
-
       <section class="features-section" aria-labelledby="features-title">
         <div class="features-copy">
+          <p data-i18n="featuresEyebrow">D4U 特性</p>
           <h2 id="features-title" data-i18n="featureOneTitle">
             像哨兵一样监控你的稳定币，安全接收 USDT。
           </h2>
@@ -369,7 +313,7 @@
             alt="D4U Sentry animated filtering demo"
           />
         </div>
-      </section> -->
+      </section>
 
       <section
         class="features-section feature-reverse"
@@ -383,6 +327,7 @@
         </div>
 
         <div class="features-copy">
+          <p data-i18n="featuresEyebrow">D4U 特性</p>
           <h2 id="privacy-feature-title" data-i18n="featureTwoTitle">
             如你所愿，隐形存在。私密支付 USDT。
           </h2>
@@ -391,6 +336,7 @@
 
       <section class="features-section" aria-labelledby="sweep-feature-title">
         <div class="features-copy">
+          <p data-i18n="featuresEyebrow">D4U 特性</p>
           <h2 id="sweep-feature-title" data-i18n="featureThreeTitle">
             低费率、隐私化的 USDT 子钱包转账。
           </h2>
@@ -409,14 +355,14 @@
         aria-labelledby="vault-feature-title"
       >
         <div class="sentry-demo sentry-demo-image">
-          <object
-            data="./assets/d4u_sentry_svg_animated%202.svg"
-            type="image/svg+xml"
-            aria-label="D4U multiple vaults animated demo"
-          ></object>
+          <img
+            src="./assets/d4u_sentry_svg_animated%202.svg"
+            alt="D4U multiple vaults animated demo"
+          />
         </div>
 
         <div class="features-copy">
+          <p data-i18n="featuresEyebrow">D4U 特性</p>
           <h2 id="vault-feature-title" data-i18n="featureFourTitle">
             多个金库，多种用途，尽在一处
           </h2>
@@ -798,299 +744,62 @@
             <table class="compare-table">
               <thead>
                 <tr>
-                  <th scope="col" class="compare-feature-head">
-                    <span data-i18n="compareFeatureCol">功能</span>
-                  </th>
-                  <th scope="col" class="compare-brand-head compare-col-d4u">
-                    <span class="compare-brand-label">
-                      <img
-                        class="compare-brand-logo"
-                        src="./assets/coin/d4u.png"
-                        alt=""
-                        width="32"
-                        height="32"
-                      />
-                      <span>D4U</span>
-                    </span>
-                  </th>
-                  <th scope="col" class="compare-brand-head">
-                    <span class="compare-brand-label">
-                      <img
-                        class="compare-brand-logo"
-                        src="./assets/wallets/imtoken.svg"
-                        alt=""
-                        width="32"
-                        height="32"
-                      />
-                      <span>imToken</span>
-                    </span>
-                  </th>
-                  <th scope="col" class="compare-brand-head">
-                    <span class="compare-brand-label">
-                      <img
-                        class="compare-brand-logo"
-                        src="./assets/wallets/safepal.png"
-                        alt=""
-                        width="32"
-                        height="32"
-                      />
-                      <span>SafePal</span>
-                    </span>
-                  </th>
-                  <th scope="col" class="compare-brand-head">
-                    <span class="compare-brand-label">
-                      <img
-                        class="compare-brand-logo"
-                        src="./assets/wallets/binance-wallet.svg"
-                        alt=""
-                        width="32"
-                        height="32"
-                      />
-                      <span>Binance Wallet</span>
-                    </span>
-                  </th>
-                  <th scope="col" class="compare-brand-head">
-                    <span class="compare-brand-label">
-                      <img
-                        class="compare-brand-logo"
-                        src="./assets/wallets/safe-wallet.svg"
-                        alt=""
-                        width="32"
-                        height="32"
-                      />
-                      <span>Safe Wallet</span>
-                    </span>
-                  </th>
+                  <th scope="col" data-i18n="compareFeatureCol">功能</th>
+                  <th scope="col">D4U</th>
+                  <th scope="col">Im token</th>
+                  <th scope="col">Safepal</th>
+                  <th scope="col">Binance Wallet</th>
+                  <th scope="col">Safe Wallet</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row" data-i18n="compareRowOne">安全收款</th>
-                  <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="compareRowTwo">隐私支付</th>
-                  <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="compareRowThree">资金分层</th>
-                  <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="compareRowFour">资产隐私归集</th>
-                  <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="compareRowFive">动态地址矩阵</th>
-                  <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 8l8 8M16 8l-8 8" />
-                      </svg>
-                    </span>
-                  </td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="compareRowSix">非托管</th>
-                  <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
-                  <td>
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7 12.5 10.5 16 17 9.5" />
-                      </svg>
-                    </span>
-                  </td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
                 </tr>
               </tbody>
             </table>
@@ -1102,6 +811,9 @@
         <div class="trust-inner">
           <div class="trust-copy">
             <h2 id="trust-title" data-i18n="trustTitle">值得信赖</h2>
+            <p class="trust-subtitle" data-i18n="trustSubtitle">
+              获领先机构认证
+            </p>
 
             <ul class="trust-list">
               <li class="trust-item">
@@ -1124,16 +836,6 @@
                   </svg>
                 </div>
                 <h3 data-i18n="trustTwo">零知识架构</h3>
-              </li>
-
-              <li class="trust-item">
-                <div class="trust-item-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="9" r="4" />
-                    <path d="M8.5 13 7 21l5-3 5 3-1.5-7" />
-                  </svg>
-                </div>
-                <h3 data-i18n="trustThree">获领先机构认证</h3>
               </li>
             </ul>
           </div>
@@ -1567,30 +1269,25 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-brand">
-          <a class="footer-logo" href="#" aria-label="D4U Home">
-            <img src="./assets/coin/d4u.png" alt="" width="44" height="44" />
-            <span>D4U</span>
-          </a>
+          <a class="footer-logo" href="#" aria-label="D4U Home">D4U</a>
           <p data-i18n="footerTagline">Defense Decentralized Dollar for U</p>
           <div class="footer-social">
             <a href="#" aria-label="X">
-              <img src="./assets/social/x.svg" alt="" width="18" height="18" />
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4l16 16M20 4 4 20" />
+              </svg>
             </a>
             <a href="#" aria-label="Telegram">
-              <img
-                src="./assets/social/telegram.svg"
-                alt=""
-                width="18"
-                height="18"
-              />
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 5 3 11l7 2 2 7 9-15-9 9v-7l7-2Z" />
+              </svg>
             </a>
             <a href="#" aria-label="GitHub">
-              <img
-                src="./assets/social/github.svg"
-                alt=""
-                width="18"
-                height="18"
-              />
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 18 3.77 5.07 5.07 0 0 0 17.91 1S16.73.65 14 2.48a13.38 13.38 0 0 0-7 0C4.27.65 3.09 1 3.09 1A5.07 5.07 0 0 0 3 3.77 5.44 5.44 0 0 0 1 8.72c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 7 19.13V23"
+                />
+              </svg>
             </a>
           </div>
         </div>

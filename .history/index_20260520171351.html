@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D4U</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <button class="nav-backdrop" type="button" data-nav-backdrop tabindex="-1" aria-hidden="true" data-i18n-aria="navMenuClose"></button>
+    <div class="header-bar">
+      <a class="brand" href="#" data-i18n-aria="brandHome">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z" />
+          </svg>
+        </span>
+        <span class="brand-text">D4U</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#intro-title" data-i18n="navAbout">关于</a>
+        <a href="#stats-title" data-i18n="navStats">数据</a>
+        <a href="#demo-title" data-i18n="navDemo">演示</a>
+        <a href="#features-title" data-i18n="navFeatures">特性</a>
+        <a class="site-nav-cta" href="#download" data-i18n="download">下载</a>
+        <div class="site-nav-footer">
+          <button class="lang-toggle lang-toggle-menu" type="button" data-lang-toggle>
+            EN / 中文
+          </button>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-toggle lang-toggle-bar" type="button" aria-label="Switch language" data-lang-toggle>
+          EN / 中文
+        </button>
+        <a class="header-download" href="#download" data-i18n-aria="downloadAria">
+          <span data-i18n="download">下载</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          data-nav-toggle
+          data-i18n-aria="navMenuOpen"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow hero-glow-a"></div>
+        <div class="hero-glow hero-glow-b"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <span class="hero-badge" data-i18n="heroBadge">下一代稳定币账户基础设施</span>
+
+          <h1 id="hero-title">
+            <span class="hero-title-row">
+              <span id="lead-word">Defense</span>
+              <span class="divider" data-i18n="heroDivider">For</span>
+            </span>
+            <span class="hero-title-accent" id="target-word">USDT</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            非托管、隐私优先的 USDT 钱包。安全收款、隐私支付、资金分层，一站式搞定。
+          </p>
+
+          <div class="hero-actions">
+            <a class="download-button hero-cta" href="#download" data-i18n-aria="downloadAria">
+              <span data-i18n="download">下载</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" />
+              </svg>
+            </a>
+
+            <ul class="hero-chips" aria-label="Key features">
+              <li data-i18n="heroChipOne">非托管</li>
+              <li data-i18n="heroChipTwo">隐私保护</li>
+              <li data-i18n="heroChipThree">零知识证明</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-orbit" aria-hidden="true">
+            <div class="hero-orbit-ring ring-one"></div>
+            <div class="hero-orbit-ring ring-two"></div>
+            <div class="hero-orbit-ring ring-three"></div>
+            <div class="hero-shield-core">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z" />
+              </svg>
+              <span>USDT</span>
+            </div>
+          </div>
+
+          <div class="wallet-preview">
+            <div class="wallet-card">
+              <div class="wallet-card-head">
+                <span data-i18n="heroWalletBalance">总余额</span>
+                <strong data-i18n="heroWalletProtected">已保护</strong>
+              </div>
+              <div class="wallet-balance">$98,546.50</div>
+              <div class="wallet-change" data-i18n="heroWalletChange">今日 +4.32%</div>
+              <div class="wallet-actions">
+                <span data-i18n="heroWalletSend">发送</span>
+                <span data-i18n="heroWalletReceive">接收</span>
+                <span data-i18n="heroWalletSafe">安全</span>
+              </div>
+              <div class="asset-list">
+                <div class="asset-row">
+                  <span>USDT</span>
+                  <strong>42,800</strong>
+                </div>
+                <div class="asset-row">
+                  <span>USDC</span>
+                  <strong>18,420</strong>
+                </div>
+                <div class="asset-row">
+                  <span>DAI</span>
+                  <strong>9,650</strong>
+                </div>
+              </div>
+              <div class="swap-toast" data-i18n="heroWalletToast">风险路线已清除</div>
+            </div>
+          </div>
+
+          <div class="hero-float hero-float-top" data-i18n="heroFloatSafe">隐私路径已保护</div>
+          <div class="hero-float hero-float-bottom" data-i18n="heroFloatRisk">风险已清除</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-section" aria-labelledby="intro-title">
+      <div class="intro-visual" aria-hidden="true">
+        <div class="phone-frame">
+          <div class="phone-speaker"></div>
+          <div class="phone-screen">
+            <div class="mesh mesh-one"></div>
+            <div class="mesh mesh-two"></div>
+          </div>
+        </div>
+        <div class="privacy-cloud"></div>
+        <div class="secure-card">
+          <div class="secure-mark"></div>
+        </div>
+      </div>
+
+      <div class="intro-copy">
+        <h2 id="intro-title">
+          <span data-i18n="introTitle">
+            欢迎来到D4U-- 下一代稳定币智能账户基础设施体系
+          </span>
+        </h2>
+
+        <div class="intro-tabs">
+          <div class="copy-block is-active" data-tab-panel>
+            <button class="copy-trigger" type="button" aria-expanded="true">
+              <span data-i18n="introBlockOneTitle">传统钱包存在设计缺陷</span>
+            </button>
+            <div class="copy-body">
+              <div class="copy-body-inner">
+                <p>
+                  <span data-i18n="introBlockOneBody">
+                    传统web3钱包无法从根源保护你的USDT隐私和安全，你的钱包拥有极大的被污染风险，以及隐私泄露风险。
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="copy-block" data-tab-panel>
+            <button class="copy-trigger" type="button" aria-expanded="false">
+              <span data-i18n="introBlockTwoTitle">
+                D4U不只是钱包，更是USDT秩序的构建者
+              </span>
+            </button>
+            <div class="copy-body">
+              <div class="copy-body-inner">
+                <p>
+                  <span data-i18n="introBlockTwoBody">
+                    得益于去中心化设计、D4U混合网络技术和零知识证明技术，D4U重新构建了USDT的使用秩序。
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section" aria-labelledby="stats-title">
+      <h2 id="stats-title" data-i18n="statsTitle">全球用户信赖</h2>
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon icon-users">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <strong><span data-count-to="200000" data-format="comma">0</span></strong>
+          <span data-i18n="statUsers">用户</span>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon icon-globe">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20" />
+              <path d="M12 2a15 15 0 0 1 0 20" />
+              <path d="M12 2a15 15 0 0 0 0 20" />
+            </svg>
+          </div>
+          <strong><span data-count-to="70">0</span>+</strong>
+          <span data-i18n="statCountries">支持国家</span>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon icon-secured">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m3 17 6-6 4 4 7-7" />
+              <path d="M14 8h6v6" />
+            </svg>
+          </div>
+          <strong>$<span data-count-to="5">0</span>B+</strong>
+          <span data-i18n="statSecured">安全保障总额</span>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon icon-processed">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </div>
+          <strong>$<span data-count-to="50">0</span>M+</strong>
+          <span data-i18n="statProcessed">日处理量</span>
+        </article>
+      </div>
+    </section>
+
+      <section class="demo-section" aria-labelledby="demo-title">
+
+        <article class="demo-card">
+          <div class="demo-phone">
+            <div class="demo-topbar">
+              <span></span>
+              <strong data-i18n="demoReceiveTopbar">安全收款</strong>
+              <span></span>
+            </div>
+            <div class="chat-thread" data-chat-demo>
+                <div class="chat-bubble incoming" data-chat-step data-i18n="demoReceiveChat1">
+                  检测到 1,280 USDT 入账。
+                </div>
+                <div class="chat-bubble outgoing" data-chat-step data-i18n="demoReceiveChat2">
+                  收款前先检查污染风险。
+                </div>
+                <div class="chat-bubble system" data-chat-step data-i18n="demoReceiveChat3">
+                  地址风险已清除，可安全接收。
+                </div>
+                <div class="transfer-card safe" data-chat-step>
+                  <span data-i18n="demoReceiveCardLabel">安全收款</span>
+                  <strong data-i18n="demoReceiveCardStrong">已验证</strong>
+                  <small data-i18n="demoReceiveCardSmall">来源风险已清除。</small>
+                </div>
+              <div class="typing-indicator" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <h3 data-i18n="demoTwoTitle">安全收款</h3>
+          <p data-i18n="demoTwoBody">收款前识别风险来源，降低钱包污染风险。</p>
+        </article>
+        </div>
+      </section>
+
+      <section class="features-section" aria-labelledby="features-title">
+        <div class="features-copy">
+          <p data-i18n="featuresEyebrow">D4U 特性</p>
+          <h2 id="features-title" data-i18n="featureOneTitle">
+            像哨兵一样监控你的稳定币，安全接收 USDT。
+          </h2>
+        </div>
+
+        <div class="sentry-demo sentry-demo-image" aria-label="D4U Sentry filtering demo">
+          <img
+            src="./assets/d4u_sentry_svg_animated.svg"
+            alt="D4U Sentry animated filtering demo"
+          />
+        </div>
+      </section>
+
+      <section class="features-section feature-reverse" aria-labelledby="privacy-feature-title">
+        <div class="sentry-demo sentry-demo-image">
+          <img
+            src="./assets/updated_uploaded_svg_wallet_hybrid_network.svg"
+            alt="D4U private payment animated demo"
+          />
+        </div>
+
+        <div class="features-copy">
+          <p data-i18n="featuresEyebrow">D4U 特性</p>
+          <h2 id="privacy-feature-title" data-i18n="featureTwoTitle">
+            如你所愿，隐形存在。私密支付 USDT。
+          </h2>
+        </div>
+      </section>
+
+      <section class="features-section" aria-labelledby="sweep-feature-title">
+        <div class="features-copy">
+          <p data-i18n="featuresEyebrow">D4U 特性</p>
+          <h2 id="sweep-feature-title" data-i18n="featureThreeTitle">
+            低费率、隐私化的 USDT 子钱包转账。
+          </h2>
+        </div>
+
+        <div class="sentry-demo sentry-demo-image">
+          <img
+            src="./assets/payram_smartsweep_animate_motion%202.svg"
+            alt="D4U private smart sweep animated demo"
+          />
+        </div>
+      </section>
+
+      <section class="features-section feature-reverse" aria-labelledby="vault-feature-title">
+        <div class="sentry-demo sentry-demo-image">
+          <img
+            src="./assets/d4u_sentry_svg_animated%202.svg"
+            alt="D4U multiple vaults animated demo"
+          />
+        </div>
+
+        <div class="features-copy">
+          <p data-i18n="featuresEyebrow">D4U 特性</p>
+          <h2 id="vault-feature-title" data-i18n="featureFourTitle">
+            多个金库，多种用途，尽在一处
+          </h2>
+        </div>
+      </section>
+
+      <section class="engine-section" aria-labelledby="engine-title">
+        <div class="engine-inner">
+          <h2 id="engine-title" data-i18n="engineTitle">多层隐私与安全架构</h2>
+
+          <div class="engine-group">
+            <div class="engine-group-title">
+              <div class="engine-title-icon tone-blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z" />
+                  <path d="m9.5 12 2 2 3.5-3.5" />
+                </svg>
+              </div>
+              <h3 data-i18n="sentryEngineName">D4U 哨兵引擎</h3>
+            </div>
+
+            <div class="engine-card-grid">
+              <article class="engine-card">
+                <div class="engine-card-icon tone-blue" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+                    <path d="m4.9 4.9 2.1 2.1M16.9 16.9l2.1 2.1M4.9 19.1l2.1-2.1M16.9 7.1l2.1-2.1" />
+                  </svg>
+                </div>
+                <h4 data-i18n="sentryCardOneTitle">实时监控</h4>
+                <p data-i18n="sentryCardOneBody">毫秒级KYT检测，零延迟隔离风险资金</p>
+              </article>
+
+              <article class="engine-card">
+                <div class="engine-card-icon tone-purple" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z" />
+                    <path d="M8 12h8M12 8v8" />
+                  </svg>
+                </div>
+                <h4 data-i18n="sentryCardTwoTitle">多层防护</h4>
+                <p data-i18n="sentryCardTwoBody">覆盖链上追溯、混币识别、黑U数据库、制裁名单等多个检测维度</p>
+              </article>
+
+              <article class="engine-card">
+                <div class="engine-card-icon tone-orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.7 21a2 2 0 0 1-3.4 0" />
+                  </svg>
+                </div>
+                <h4 data-i18n="sentryCardThreeTitle">智能预警</h4>
+                <p data-i18n="sentryCardThreeBody">高中低风险三级分类，自动隔离可疑交易。</p>
+              </article>
+
+              <article class="engine-card">
+                <div class="engine-card-icon tone-teal" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 7h16v10H4z" />
+                    <path d="M8 11h8M8 15h5" />
+                    <path d="M16 4v3M19 7l-3-3" />
+                  </svg>
+                </div>
+                <h4 data-i18n="sentryCardFourTitle">地址矩阵</h4>
+                <p data-i18n="sentryCardFourBody">每笔交易自动生成临时地址,用后即焚不留痕迹。</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="engine-group">
+            <div class="engine-group-title">
+              <div class="engine-title-icon tone-violet" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z" />
+                  <path d="M8 12h8M12 8v8" />
+                </svg>
+              </div>
+              <h3 data-i18n="cloakEngineName">D4U斗篷模式--零痕迹支付系统</h3>
+            </div>
+
+            <div class="engine-card-grid two-up">
+              <article class="engine-card">
+                <div class="engine-card-icon tone-indigo" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="2" />
+                    <circle cx="18" cy="18" r="2" />
+                    <path d="M8 6h5a4 4 0 0 1 4 4v2M16 18h-5a4 4 0 0 1-4-4v-2" />
+                  </svg>
+                </div>
+                <h4 data-i18n="cloakCardOneTitle">路径混淆</h4>
+                <p data-i18n="cloakCardOneBody">通过D4U混合网络和隐私路由技术打散交易特征,切断地址关联性</p>
+              </article>
+
+              <article class="engine-card">
+                <div class="engine-card-icon tone-pink" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <path d="M14 2v6h6M9 15l2 2 4-4" />
+                  </svg>
+                </div>
+                <h4 data-i18n="cloakCardTwoTitle">元数据清零</h4>
+                <p data-i18n="cloakCardTwoBody">不记录转账时间、金额模式、交易对手等任何元数据</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ecosystem-section" aria-labelledby="ecosystem-title">
+        <div class="ecosystem-inner">
+          <h2 id="ecosystem-title" data-i18n="ecosystemTitle">D4U生态系统</h2>
+
+          <div class="ecosystem-grid">
+            <article class="ecosystem-item">
+              <div class="ecosystem-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <rect x="8" y="12" width="8" height="8" fill="currentColor" />
+                  <rect x="20" y="12" width="8" height="8" fill="currentColor" />
+                  <rect x="32" y="12" width="8" height="8" fill="currentColor" />
+                  <rect x="8" y="24" width="8" height="8" fill="currentColor" />
+                  <rect x="20" y="24" width="8" height="8" fill="currentColor" />
+                  <rect x="32" y="24" width="8" height="8" fill="currentColor" />
+                  <rect x="44" y="24" width="8" height="8" fill="currentColor" />
+                  <rect x="8" y="36" width="8" height="8" fill="currentColor" />
+                  <rect x="20" y="36" width="8" height="8" fill="currentColor" />
+                  <rect x="32" y="36" width="8" height="8" fill="currentColor" />
+                  <rect x="8" y="48" width="8" height="8" fill="currentColor" />
+                  <rect x="20" y="48" width="8" height="8" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="ecosystem-copy">
+                <h3 data-i18n="ecosystemOneTitle">即时生成式地址簿</h3>
+                <p data-i18n="ecosystemOneBody">基于Stealth Address技术，您的链上隐私得以实现。</p>
+              </div>
+            </article>
+
+            <article class="ecosystem-item">
+              <div class="ecosystem-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <rect x="28" y="8" width="8" height="8" fill="currentColor" />
+                  <rect x="12" y="24" width="8" height="8" fill="currentColor" />
+                  <rect x="28" y="24" width="8" height="8" fill="currentColor" />
+                  <rect x="44" y="24" width="8" height="8" fill="currentColor" />
+                  <rect x="8" y="40" width="8" height="8" fill="currentColor" />
+                  <rect x="20" y="40" width="8" height="8" fill="currentColor" />
+                  <rect x="32" y="40" width="8" height="8" fill="currentColor" />
+                  <rect x="44" y="40" width="8" height="8" fill="currentColor" />
+                  <rect x="28" y="52" width="8" height="8" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="ecosystem-copy">
+                <h3 data-i18n="ecosystemTwoTitle">D4U混合网络公链系统</h3>
+                <p data-i18n="ecosystemTwoBody">强大的混合网络式公链系统，收支更快速，更高效，更省钱。</p>
+              </div>
+            </article>
+
+            <article class="ecosystem-item">
+              <div class="ecosystem-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <rect x="10" y="14" width="8" height="8" fill="currentColor" />
+                  <rect x="22" y="14" width="8" height="8" fill="currentColor" />
+                  <rect x="34" y="14" width="8" height="8" fill="currentColor" />
+                  <rect x="46" y="14" width="8" height="8" fill="currentColor" />
+                  <rect x="10" y="28" width="8" height="8" fill="currentColor" />
+                  <rect x="34" y="28" width="8" height="8" fill="currentColor" />
+                  <rect x="46" y="28" width="8" height="8" fill="currentColor" />
+                  <rect x="10" y="42" width="8" height="8" fill="currentColor" />
+                  <rect x="22" y="42" width="8" height="8" fill="currentColor" />
+                  <rect x="34" y="42" width="8" height="8" fill="currentColor" />
+                  <rect x="46" y="42" width="8" height="8" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="ecosystem-copy">
+                <h3 data-i18n="ecosystemThreeTitle">D4U API&SDK</h3>
+                <p data-i18n="ecosystemThreeBody">强大的API&SDK集成，实时监控，智能预警，隐形支付，资金分层，一次搞定。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="compare-section" aria-labelledby="compare-title">
+        <div class="compare-inner">
+          <header class="compare-heading">
+            <h2 id="compare-title" data-i18n="compareTitle">更强隐私，更加安全，更多自由。</h2>
+            <p data-i18n="compareSubtitle">看看我们的三大引擎如何发挥技术优势</p>
+          </header>
+
+          <div class="compare-table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="compareFeatureCol">功能</th>
+                  <th scope="col">D4U</th>
+                  <th scope="col">Im token</th>
+                  <th scope="col">Safepal</th>
+                  <th scope="col">Binance Wallet</th>
+                  <th scope="col">Safe Wallet</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-i18n="compareRowOne">安全收款</th>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compareRowTwo">隐私支付</th>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compareRowThree">资金分层</th>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compareRowFour">资产隐私归集</th>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compareRowFive">动态地址矩阵</th>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                  <td><span class="mark-no" aria-hidden="true">×</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compareRowSix">非托管</th>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                  <td><span class="mark-yes" aria-hidden="true">√</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-section" aria-labelledby="trust-title">
+        <div class="trust-inner">
+          <div class="trust-copy">
+            <h2 id="trust-title" data-i18n="trustTitle">值得信赖</h2>
+            <p class="trust-subtitle" data-i18n="trustSubtitle">获领先机构认证</p>
+
+            <ul class="trust-list">
+              <li class="trust-item">
+                <div class="trust-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z" />
+                    <path d="m9.5 12 2 2 3.5-3.5" />
+                  </svg>
+                </div>
+                <h3 data-i18n="trustOne">经 CertiK、PeckShield 审计</h3>
+              </li>
+
+              <li class="trust-item">
+                <div class="trust-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="5" y="11" width="14" height="10" rx="2" />
+                    <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                  </svg>
+                </div>
+                <h3 data-i18n="trustTwo">零知识架构</h3>
+              </li>
+            </ul>
+          </div>
+
+          <div class="trust-visual" aria-hidden="true">
+            <div class="trust-ring ring-one"></div>
+            <div class="trust-ring ring-two"></div>
+            <div class="trust-ring ring-three"></div>
+            <div class="trust-core">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z" />
+              </svg>
+            </div>
+            <span class="trust-node node-top">AES</span>
+            <span class="trust-node node-right">ZKP</span>
+            <span class="trust-node node-bottom">RSA</span>
+            <span class="trust-node node-left">E2E</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="investors-section" aria-labelledby="investors-title">
+        <h2 id="investors-title" data-i18n="investorsTitle">顶级投资者背书</h2>
+        <div class="investors-bar">
+          <ul class="investors-list">
+            <li>
+              <svg class="investor-logo" viewBox="0 0 132 36" aria-label="Vitalik">
+                <text x="0" y="27" fill="currentColor" font-family="Inter, ui-sans-serif, sans-serif" font-size="26" font-weight="800">Vitalik</text>
+              </svg>
+            </li>
+            <li>
+              <svg class="investor-logo logo-a16z" viewBox="0 0 88 36" aria-label="a16z">
+                <text x="0" y="27" fill="currentColor" font-family="Inter, ui-sans-serif, sans-serif" font-size="28" font-weight="800">a16z</text>
+              </svg>
+            </li>
+            <li>
+              <svg class="investor-logo" viewBox="0 0 168 36" aria-label="Paradigm">
+                <text x="0" y="27" fill="currentColor" font-family="Inter, ui-sans-serif, sans-serif" font-size="24" font-weight="800" letter-spacing="0.04em">PARADIGM</text>
+              </svg>
+            </li>
+            <li>
+              <svg class="investor-logo logo-coinbase" viewBox="0 0 220 40" aria-label="Coinbase Ventures">
+                <circle cx="14" cy="20" r="10" fill="currentColor" />
+                <text x="32" y="18" fill="currentColor" font-family="Inter, ui-sans-serif, sans-serif" font-size="18" font-weight="800">Coinbase</text>
+                <text x="32" y="34" fill="currentColor" font-family="Inter, ui-sans-serif, sans-serif" font-size="13" font-weight="700" letter-spacing="0.08em">VENTURES</text>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="privacy-title">
+        <div class="privacy-inner">
+          <h2 id="privacy-title" data-i18n="privacyTitle">隐私与安全驱动设计</h2>
+
+          <div class="privacy-grid">
+            <article class="privacy-card">
+              <div class="privacy-visual" aria-hidden="true">
+                <svg viewBox="0 0 320 180">
+                  <rect x="58" y="36" width="56" height="96" rx="10" fill="rgba(15,23,42,0.35)" stroke="rgba(255,255,255,0.35)" stroke-width="2" />
+                  <rect x="132" y="24" width="56" height="108" rx="10" fill="rgba(15,23,42,0.45)" stroke="rgba(255,255,255,0.45)" stroke-width="2" />
+                  <rect x="206" y="42" width="56" height="90" rx="10" fill="rgba(15,23,42,0.3)" stroke="rgba(255,255,255,0.3)" stroke-width="2" />
+                  <path d="M148 62h24M148 78h18M148 94h22" stroke="rgba(52,211,153,0.9)" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="privacyCardOneTitle">始终自托管</h3>
+              <p data-i18n="privacyCardOneBody">D4U 完全非托管——你的密钥、你的资产、你的掌控。我们从不持有你的资金。</p>
+            </article>
+
+            <article class="privacy-card">
+              <div class="privacy-visual" aria-hidden="true">
+                <svg viewBox="0 0 320 180">
+                  <rect x="56" y="38" width="208" height="104" rx="12" fill="rgba(15,23,42,0.35)" />
+                  <path d="M72 62h176M72 82h128M72 102h152M72 122h96" stroke="rgba(52,211,153,0.45)" stroke-width="3" stroke-linecap="round" />
+                  <path d="M160 88 136 104v24l24 16 24-16v-24l-24-16Z" fill="#f8fafc" stroke="rgba(15,23,42,0.5)" stroke-width="2" />
+                  <rect x="152" y="108" width="16" height="14" rx="3" fill="rgba(15,23,42,0.82)" />
+                </svg>
+              </div>
+              <h3 data-i18n="privacyCardTwoTitle">默认开源</h3>
+              <p data-i18n="privacyCardTwoBody">核心组件开源。你不必相信我们的承诺——你可以亲自验证安全性。</p>
+            </article>
+
+            <article class="privacy-card">
+              <div class="privacy-visual" aria-hidden="true">
+                <svg viewBox="0 0 320 180">
+                  <path d="M72 118 160 74 248 118" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" />
+                  <path d="M88 128 160 92 232 128" fill="rgba(15,23,42,0.35)" stroke="rgba(52,211,153,0.7)" stroke-width="2" />
+                  <path d="M104 138 160 108 216 138" fill="rgba(15,23,42,0.45)" stroke="rgba(52,211,153,0.85)" stroke-width="2" />
+                  <circle cx="120" cy="118" r="5" fill="#34d399" />
+                  <circle cx="160" cy="102" r="5" fill="#34d399" />
+                  <circle cx="200" cy="118" r="5" fill="#34d399" />
+                  <circle cx="136" cy="128" r="5" fill="#34d399" />
+                  <circle cx="184" cy="128" r="5" fill="#34d399" />
+                </svg>
+              </div>
+              <h3 data-i18n="privacyCardThreeTitle">混合网络</h3>
+              <p data-i18n="privacyCardThreeBody">混合网络打散并重排交易路径，你的资金流向难以被追溯。</p>
+            </article>
+
+            <article class="privacy-card">
+              <div class="privacy-visual" aria-hidden="true">
+                <svg viewBox="0 0 320 180">
+                  <rect x="72" y="34" width="176" height="112" rx="14" fill="rgba(15,23,42,0.42)" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+                  <rect x="92" y="54" width="56" height="12" rx="3" fill="rgba(52,211,153,0.85)" />
+                  <rect x="156" y="54" width="72" height="12" rx="3" fill="rgba(255,255,255,0.18)" />
+                  <rect x="92" y="78" width="72" height="12" rx="3" fill="rgba(255,255,255,0.18)" />
+                  <rect x="172" y="78" width="56" height="12" rx="3" fill="rgba(52,211,153,0.85)" />
+                  <rect x="92" y="102" width="48" height="12" rx="3" fill="rgba(52,211,153,0.85)" />
+                  <rect x="148" y="102" width="80" height="12" rx="3" fill="rgba(255,255,255,0.18)" />
+                </svg>
+              </div>
+              <h3 data-i18n="privacyCardFourTitle">内置零知识证明</h3>
+              <p data-i18n="privacyCardFourBody">原生 ZK 证明让你在不暴露实际持仓或交易历史的情况下，证明余额或合规性。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback-section" aria-labelledby="feedback-title">
+        <div class="feedback-inner">
+          <h2 id="feedback-title" data-i18n="feedbackTitle">用户反馈（他们如何评价我们）</h2>
+
+          <div class="feedback-grid">
+            <article class="feedback-card">
+              <div class="feedback-card-top">
+                <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+                <span class="feedback-quote-mark" aria-hidden="true">"</span>
+              </div>
+              <blockquote data-i18n="feedbackOneQuote">
+                对于机构级 USDT 管理，D4U 提供了无与伦比的灵活性。分层权限系统让我们可以委派运营任务，同时保持战略控制。实时报告和多链支持改变了我们的资产配置流程。
+              </blockquote>
+              <footer class="feedback-author">
+                <div class="feedback-avatar">
+                  <img src="./assets/avatars/james-thompson.jpg" alt="James Thompson" width="48" height="48" loading="lazy" />
+                </div>
+                <div class="feedback-meta">
+                  <strong>James Thompson</strong>
+                  <span data-i18n="feedbackOneRole">Quantum Capital 管理合伙人</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="feedback-card">
+              <div class="feedback-card-top">
+                <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+                <span class="feedback-quote-mark" aria-hidden="true">"</span>
+              </div>
+              <blockquote data-i18n="feedbackTwoQuote">
+                管理客户 USDT 流转既需要速度也需要谨慎。D4U 的隐私优先设计和多签安全让我们有信心处理大额交易，而不会损害客户机密与运营安全。
+              </blockquote>
+              <footer class="feedback-author">
+                <div class="feedback-avatar">
+                  <img src="./assets/avatars/sarah-williams.jpg" alt="Sarah Williams" width="48" height="48" loading="lazy" />
+                </div>
+                <div class="feedback-meta">
+                  <strong>Sarah Williams</strong>
+                  <span data-i18n="feedbackTwoRole">OTC 商户</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="feedback-card">
+              <div class="feedback-card-top">
+                <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+                <span class="feedback-quote-mark" aria-hidden="true">"</span>
+              </div>
+              <blockquote data-i18n="feedbackThreeQuote">
+                D4U 的去中心化基础设施与我们的监管方式完美契合。自托管模式意味着我们从不触碰客户资金，而审计追踪则为合规团队提供了所需的透明度。这是隐私与问责之间的完美平衡。
+              </blockquote>
+              <footer class="feedback-author">
+                <div class="feedback-avatar">
+                  <img src="./assets/avatars/lisa-rodriguez.jpg" alt="Lisa Rodriguez" width="48" height="48" loading="lazy" />
+                </div>
+                <div class="feedback-meta">
+                  <strong>Lisa Rodriguez</strong>
+                  <span data-i18n="feedbackThreeRole">PayBridge International 合规官</span>
+                </div>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" id="download" aria-labelledby="cta-title">
+        <div class="cta-inner">
+          <div class="cta-copy">
+            <h2 id="cta-title" data-i18n="ctaTitle">立即开始</h2>
+            <p data-i18n="ctaLineOne">受到 10 万用户社区信赖，超越其他钱包。</p>
+            <p data-i18n="ctaLineTwo">加入 D4U，Defense Decentralized Dollar for You.</p>
+          </div>
+          <a class="download-button cta-button" href="#download" data-i18n-aria="ctaButtonAria">
+            <span data-i18n="ctaButton">下载</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="footer-logo" href="#" aria-label="D4U Home">D4U</a>
+          <p data-i18n="footerTagline">Defense Decentralized Dollar for U</p>
+          <div class="footer-social">
+            <a href="#" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4l16 16M20 4 4 20" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 5 3 11l7 2 2 7 9-15-9 9v-7l7-2Z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 18 3.77 5.07 5.07 0 0 0 17.91 1S16.73.65 14 2.48a13.38 13.38 0 0 0-7 0C4.27.65 3.09 1 3.09 1A5.07 5.07 0 0 0 3 3.77 5.44 5.44 0 0 0 1 8.72c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 7 19.13V23" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 data-i18n="footerProductsTitle">Products</h3>
+          <ul>
+            <li><a href="#download" data-i18n="footerDownload">Download</a></li>
+            <li><a href="#" data-i18n="footerSupport">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 data-i18n="footerResourceTitle">Resource</h3>
+          <ul>
+            <li><a href="#" data-i18n="footerBrandBook">Brand book</a></li>
+            <li><a href="#" data-i18n="footerPrivacyPolicy">Privacy policy</a></li>
+            <li><a href="#" data-i18n="footerTermsOfUse">Terms of use</a></li>
+            <li><a href="#" data-i18n="footerAuditReport">Audit report</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerCopyright">© 2026 D4U. All rights reserved.</p>
+        <p data-i18n="footerTagline">Defense Decentralized Dollar for U</p>
+      </div>
+    </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
