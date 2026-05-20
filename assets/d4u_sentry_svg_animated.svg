@@ -1,0 +1,261 @@
+<svg width="1280" height="454" viewBox="0 0 1280 454" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cardShadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#8C96A8" flood-opacity=".28"/>
+    </filter>
+
+    <filter id="blueGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b1"/>
+      <feGaussianBlur stdDeviation="14" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="greenGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b1"/>
+      <feGaussianBlur stdDeviation="14" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="redGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b1"/>
+      <feGaussianBlur stdDeviation="14" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="goldGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b1"/>
+      <feGaussianBlur stdDeviation="14" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <linearGradient id="panelBg" x1="92" y1="38" x2="1189" y2="417" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset=".55" stop-color="#EEF2F5"/>
+      <stop offset="1" stop-color="#F9FAFA"/>
+    </linearGradient>
+
+    <linearGradient id="centerGrad" x1="536" y1="102" x2="744" y2="306" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0889E8"/>
+      <stop offset=".52" stop-color="#224FB6"/>
+      <stop offset="1" stop-color="#5A008D"/>
+    </linearGradient>
+
+    <linearGradient id="tokenTeal" x1="140" y1="76" x2="199" y2="135" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1BB5A3"/>
+      <stop offset="1" stop-color="#087885"/>
+    </linearGradient>
+
+    <linearGradient id="tokenBlue" x1="140" y1="170" x2="199" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#188EE9"/>
+      <stop offset="1" stop-color="#1358AD"/>
+    </linearGradient>
+
+    <linearGradient id="tokenGold" x1="140" y1="264" x2="199" y2="322" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5C044"/>
+      <stop offset="1" stop-color="#C48713"/>
+    </linearGradient>
+
+    <linearGradient id="redCard" x1="943" y1="75" x2="1154" y2="149" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF3333"/>
+      <stop offset="1" stop-color="#D30707"/>
+    </linearGradient>
+
+    <linearGradient id="orangeCard" x1="943" y1="169" x2="1154" y2="242" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFA02A"/>
+      <stop offset="1" stop-color="#F06705"/>
+    </linearGradient>
+
+    <linearGradient id="greenCard" x1="943" y1="262" x2="1154" y2="335" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28BD69"/>
+      <stop offset="1" stop-color="#079B4B"/>
+    </linearGradient>
+
+    <radialGradient id="whiteSpark" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- SVG paths -->
+    <path id="tealPath" d="M199 103 C280 103 343 99 395 104 C447 109 446 155 520 164 L536 164"/>
+    <path id="bluePath" d="M199 199 C315 199 424 199 536 199"/>
+    <path id="goldPath" d="M199 293 C288 293 359 298 403 288 C452 277 448 226 536 226"/>
+    <path id="redPath" d="M744 162 C820 164 831 106 943 112"/>
+    <path id="orangePath" d="M744 199 C825 199 865 200 943 200"/>
+    <path id="greenPath" d="M744 226 C824 230 823 298 943 298"/>
+
+    <style>
+      .tokenText { fill:#0E1118; font:700 16px Inter, Arial, sans-serif; }
+      .legend { fill:#101318; font:500 16px Inter, Arial, sans-serif; }
+      .riskTitle { fill:#fff; font:800 20px Inter, Arial, sans-serif; }
+      .riskSub { fill:#fff; font:500 14px Inter, Arial, sans-serif; opacity:.92; }
+      .centerBig { fill:#fff; font:800 43px Inter, Arial, sans-serif; }
+      .centerSmall { fill:#fff; font:500 16px Inter, Arial, sans-serif; }
+      .pipeBase { stroke-width:22; fill:none; stroke-linecap:round; opacity:.52; }
+      .pipeInner { stroke-width:10; fill:none; stroke-linecap:round; opacity:.95; }
+      .pipeHighlight { stroke:#fff; stroke-width:2; fill:none; stroke-linecap:round; opacity:.35; }
+      .spark { fill:url(#whiteSpark); opacity:0; }
+      .flow { fill:#fff; opacity:0; filter:url(#blueGlow); }
+      .lineFlow { stroke:#fff; stroke-width:3; fill:none; stroke-linecap:round; stroke-dasharray:22 260; opacity:0; }
+      .flowTeal { filter:url(#blueGlow); }
+      .flowBlue { filter:url(#blueGlow); }
+      .flowGold { filter:url(#goldGlow); }
+      .flowRed { filter:url(#redGlow); }
+      .flowGreen { filter:url(#greenGlow); }
+
+      .trail { animation: trail 3s linear infinite; }
+      .trail.delay1 { animation-delay:.15s; }
+      .trail.delay2 { animation-delay:.3s; }
+      .trail.delay3 { animation-delay:1.25s; }
+      .trail.delay4 { animation-delay:1.45s; }
+      .trail.delay5 { animation-delay:1.65s; }
+
+      @keyframes trail {
+        0%, 8%, 100% { opacity:0; stroke-dashoffset:260; }
+        20% { opacity:.9; }
+        55% { opacity:.45; stroke-dashoffset:0; }
+        70% { opacity:0; }
+      }
+
+      .particle {
+        animation: particleOpacity 3s linear infinite;
+      }
+      @keyframes particleOpacity {
+        0%,100% { opacity:0; }
+        15%,70% { opacity:.95; }
+      }
+
+      .centerPulse { animation:centerPulse 3s ease-in-out infinite; transform-origin:640px 204px; }
+      @keyframes centerPulse {
+        0%,100% { transform:scale(1); filter: drop-shadow(0 18px 28px rgba(43,69,144,.28));}
+        50% { transform:scale(1.018); filter: drop-shadow(0 22px 34px rgba(43,69,144,.38));}
+      }
+
+      .riskPulse1 { animation: riskPulse 3s ease-in-out infinite 1.35s; transform-origin:1048px 112px; }
+      .riskPulse2 { animation: riskPulse 3s ease-in-out infinite 1.55s; transform-origin:1048px 205px; }
+      .riskPulse3 { animation: riskPulse 3s ease-in-out infinite 1.75s; transform-origin:1048px 298px; }
+      @keyframes riskPulse {
+        0%,100% { transform:scale(1); opacity:1; }
+        50% { transform:scale(1.025); opacity:.96; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1280" height="454" fill="#E9EEF2"/>
+  <rect x="91" y="37" width="1098" height="381" rx="23" fill="url(#panelBg)" filter="url(#cardShadow)"/>
+
+  <!-- pipes base -->
+  <use href="#tealPath" class="pipeBase" stroke="#27B7B1"/>
+  <use href="#tealPath" class="pipeInner" stroke="#10A39D"/>
+  <use href="#tealPath" class="pipeHighlight"/>
+
+  <use href="#bluePath" class="pipeBase" stroke="#2A92DC"/>
+  <use href="#bluePath" class="pipeInner" stroke="#1784D4"/>
+  <use href="#bluePath" class="pipeHighlight"/>
+
+  <use href="#goldPath" class="pipeBase" stroke="#E7AC30"/>
+  <use href="#goldPath" class="pipeInner" stroke="#D99A16"/>
+  <use href="#goldPath" class="pipeHighlight"/>
+
+  <use href="#redPath" class="pipeBase" stroke="#EF2D32"/>
+  <use href="#redPath" class="pipeInner" stroke="#E11922"/>
+  <use href="#redPath" class="pipeHighlight"/>
+
+  <use href="#orangePath" class="pipeBase" stroke="#EAA13A"/>
+  <use href="#orangePath" class="pipeInner" stroke="#D99424"/>
+  <use href="#orangePath" class="pipeHighlight"/>
+
+  <use href="#greenPath" class="pipeBase" stroke="#24B965"/>
+  <use href="#greenPath" class="pipeInner" stroke="#16A85C"/>
+  <use href="#greenPath" class="pipeHighlight"/>
+
+  <!-- animated pipe highlights -->
+  <use href="#tealPath" class="lineFlow flowTeal trail" stroke="#E9FFFF"/>
+  <use href="#bluePath" class="lineFlow flowBlue trail delay1" stroke="#EAF7FF"/>
+  <use href="#goldPath" class="lineFlow flowGold trail delay2" stroke="#FFF5CB"/>
+  <use href="#redPath" class="lineFlow flowRed trail delay3" stroke="#FFECEC"/>
+  <use href="#orangePath" class="lineFlow flowGold trail delay4" stroke="#FFF0C8"/>
+  <use href="#greenPath" class="lineFlow flowGreen trail delay5" stroke="#EFFFF5"/>
+
+  <!-- moving particles -->
+  <circle r="4" class="flow particle flowTeal"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#tealPath"/></animateMotion></circle>
+  <circle r="3" class="flow particle flowTeal"><animateMotion dur="3s" begin=".28s" repeatCount="indefinite"><mpath href="#tealPath"/></animateMotion></circle>
+
+  <circle r="4" class="flow particle flowBlue"><animateMotion dur="3s" begin=".15s" repeatCount="indefinite"><mpath href="#bluePath"/></animateMotion></circle>
+  <circle r="3" class="flow particle flowBlue"><animateMotion dur="3s" begin=".44s" repeatCount="indefinite"><mpath href="#bluePath"/></animateMotion></circle>
+
+  <circle r="4" class="flow particle flowGold"><animateMotion dur="3s" begin=".3s" repeatCount="indefinite"><mpath href="#goldPath"/></animateMotion></circle>
+  <circle r="3" class="flow particle flowGold"><animateMotion dur="3s" begin=".62s" repeatCount="indefinite"><mpath href="#goldPath"/></animateMotion></circle>
+
+  <circle r="4" class="flow particle flowRed"><animateMotion dur="3s" begin="1.25s" repeatCount="indefinite"><mpath href="#redPath"/></animateMotion></circle>
+  <circle r="3" class="flow particle flowRed"><animateMotion dur="3s" begin="1.54s" repeatCount="indefinite"><mpath href="#redPath"/></animateMotion></circle>
+
+  <circle r="4" class="flow particle flowGold"><animateMotion dur="3s" begin="1.45s" repeatCount="indefinite"><mpath href="#orangePath"/></animateMotion></circle>
+  <circle r="3" class="flow particle flowGold"><animateMotion dur="3s" begin="1.73s" repeatCount="indefinite"><mpath href="#orangePath"/></animateMotion></circle>
+
+  <circle r="4" class="flow particle flowGreen"><animateMotion dur="3s" begin="1.65s" repeatCount="indefinite"><mpath href="#greenPath"/></animateMotion></circle>
+  <circle r="3" class="flow particle flowGreen"><animateMotion dur="3s" begin="1.93s" repeatCount="indefinite"><mpath href="#greenPath"/></animateMotion></circle>
+
+  <!-- left token icons -->
+  <g>
+    <rect x="140" y="76" width="59" height="59" rx="11" fill="url(#tokenTeal)" filter="url(#blueGlow)"/>
+    <path d="M154 93h31M170 94v27M158 101c9 4 25 4 33 0M158 111c9-4 25-4 33 0" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="147" y="154" class="tokenText">USDT"</text>
+
+    <rect x="140" y="170" width="59" height="59" rx="11" fill="url(#tokenBlue)" filter="url(#blueGlow)"/>
+    <circle cx="169.5" cy="199.5" r="19" stroke="#fff" stroke-width="3"/>
+    <path d="M174 188c-13-2-15 12 0 11 13 1 11 14-2 13M170 184v31" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="147" y="248" class="tokenText">USDC"</text>
+
+    <rect x="140" y="264" width="59" height="59" rx="11" fill="url(#tokenGold)" filter="url(#goldGlow)"/>
+    <path d="M154 291h14l9 16h-14l-9-16zm23 0h12v16h-12z" fill="#fff"/>
+    <text x="154" y="342" class="tokenText">DAI"</text>
+  </g>
+
+  <!-- center block -->
+  <g class="centerPulse">
+    <rect x="536" y="102" width="208" height="204" rx="17" fill="url(#centerGrad)"/>
+    <text x="596" y="185" class="centerBig">D4U</text>
+    <text x="576" y="230" class="centerBig">Sentry</text>
+    <text x="602" y="259" class="centerSmall">Risk Radar</text>
+  </g>
+
+  <!-- right risk cards -->
+  <g class="riskPulse1">
+    <rect x="943" y="75" width="211" height="74" rx="12" fill="url(#redCard)" filter="url(#redGlow)"/>
+    <rect x="957" y="90" width="42" height="42" rx="8" fill="#fff" opacity=".16"/>
+    <path d="M978 96l15 27h-30l15-27z" fill="#fff"/>
+    <circle cx="978" cy="120" r="2" fill="#E71920"/>
+    <path d="M978 106v10" stroke="#E71920" stroke-width="3" stroke-linecap="round"/>
+    <text x="1011" y="109" class="riskTitle">High Risk</text>
+    <text x="1012" y="129" class="riskSub">Pool</text>
+  </g>
+
+  <g class="riskPulse2">
+    <rect x="943" y="168" width="211" height="74" rx="12" fill="url(#orangeCard)" filter="url(#goldGlow)"/>
+    <rect x="957" y="183" width="42" height="42" rx="8" fill="#fff" opacity=".16"/>
+    <path d="M978 190l15 27h-30l15-27z" fill="#fff"/>
+    <circle cx="978" cy="214" r="2" fill="#F28A0A"/>
+    <path d="M978 200v10" stroke="#F28A0A" stroke-width="3" stroke-linecap="round"/>
+    <text x="1011" y="202" class="riskTitle">Medium Risk</text>
+    <text x="1012" y="222" class="riskSub">Pool</text>
+  </g>
+
+  <g class="riskPulse3">
+    <rect x="943" y="261" width="211" height="74" rx="12" fill="url(#greenCard)" filter="url(#greenGlow)"/>
+    <rect x="957" y="276" width="42" height="42" rx="8" fill="#fff" opacity=".16"/>
+    <path d="M978 282l16 7v9c0 12-8 19-16 23-8-4-16-11-16-23v-9l16-7z" fill="#fff"/>
+    <path d="M970 299l6 6 11-13" stroke="#16A85C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1011" y="295" class="riskTitle">Low Risk</text>
+    <text x="1012" y="315" class="riskSub">Pool</text>
+  </g>
+
+  <!-- bottom line and legend -->
+  <line x1="127" y1="369" x2="1154" y2="369" stroke="#D1D6DC"/>
+  <circle cx="426" cy="393" r="4.5" fill="#2CB6AE"/>
+  <text x="438" y="399" class="legend">Zero Knowledge</text>
+  <circle cx="586" cy="393" r="4.5" fill="#168ADC"/>
+  <text x="598" y="399" class="legend">Risk Managed</text>
+  <circle cx="730" cy="393" r="4.5" fill="#17A660"/>
+  <text x="742" y="399" class="legend">Optimized Yield'</text>
+</svg>

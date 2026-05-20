@@ -152,7 +152,7 @@ if (counters.length > 0) {
 
 const chatDemos = Array.from(document.querySelectorAll("[data-chat-demo]"));
 
-function playChatDemo(chatDemo) {
+function playChatDemo(chatDemo, startDelay = 0) {
   const steps = Array.from(chatDemo.querySelectorAll("[data-chat-step]"));
   const typing = chatDemo.querySelector(".typing-indicator");
   let stepIndex = 0;
@@ -176,7 +176,7 @@ function playChatDemo(chatDemo) {
     }, 620);
   }
 
-  revealNext();
+  window.setTimeout(revealNext, startDelay);
 }
 
 if (chatDemos.length > 0) {
@@ -184,7 +184,8 @@ if (chatDemos.length > 0) {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          playChatDemo(entry.target);
+          const demoIndex = chatDemos.indexOf(entry.target);
+          playChatDemo(entry.target, demoIndex * 1600);
           chatObserver.unobserve(entry.target);
         }
       });

@@ -1,0 +1,248 @@
+<svg width="1108" height="372" viewBox="0 0 1108 372" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glow filters -->
+    <filter id="goldGlow" x="-180%" y="-180%" width="460%" height="460%">
+      <feGaussianBlur stdDeviation="5" result="b1"/>
+      <feGaussianBlur stdDeviation="13" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="purpleCardGlow" x="-25%" y="-45%" width="150%" height="190%">
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#6f4dff" flood-opacity=".32"/>
+    </filter>
+
+    <filter id="orangeCardGlow" x="-25%" y="-45%" width="150%" height="190%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ff9900" flood-opacity=".36"/>
+    </filter>
+
+    <filter id="greenCardGlow" x="-25%" y="-45%" width="150%" height="190%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#00d084" flood-opacity=".36"/>
+    </filter>
+
+    <linearGradient id="bgVignette" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1122"/>
+      <stop offset=".55" stop-color="#080C19"/>
+      <stop offset="1" stop-color="#0D1122"/>
+    </linearGradient>
+
+    <linearGradient id="purpleCard" x1="148" y1="60" x2="393" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4D3196"/>
+      <stop offset="1" stop-color="#271753"/>
+    </linearGradient>
+
+    <linearGradient id="orangeCard" x1="528" y1="148" x2="700" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B95E00"/>
+      <stop offset="1" stop-color="#E18408"/>
+    </linearGradient>
+
+    <linearGradient id="greenCard" x1="858" y1="151" x2="1044" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#008A63"/>
+      <stop offset="1" stop-color="#037151"/>
+    </linearGradient>
+
+    <radialGradient id="gold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4a9"/>
+      <stop offset="40%" stop-color="#ffb623"/>
+      <stop offset="100%" stop-color="#a56000"/>
+    </radialGradient>
+
+    <!-- Paths used by animateMotion -->
+    <path id="route1" d="M393 89 C432 94 443 135 512 184"/>
+    <path id="route2" d="M393 161 C440 161 465 174 512 190"/>
+    <path id="route3" d="M393 234 C440 232 466 209 512 196"/>
+    <path id="route4" d="M393 306 C437 296 455 234 512 203"/>
+    <path id="routeOut" d="M704 195 L858 195"/>
+
+    <style>
+      .label { fill:#BBADEB; font:700 8px Inter, Arial, sans-serif; letter-spacing:2px; }
+      .txt { fill:#fff; font:800 13px Inter, Arial, sans-serif; }
+      .title { fill:#fff; font:800 15px Inter, Arial, sans-serif; }
+      .subOrange { fill:#F2C982; font:500 10px Inter, Arial, sans-serif; opacity:.8; }
+      .subGreen { fill:#78E0B8; font:500 10px Inter, Arial, sans-serif; opacity:.8; }
+      .tiny { fill:#777F93; font:700 8px Inter, Arial, sans-serif; letter-spacing:1.6px; opacity:.75; }
+      .line { stroke:#293044; stroke-width:1.2; fill:none; opacity:.9; }
+      .trail {
+        stroke:#ffb322;
+        stroke-width:2.4;
+        fill:none;
+        stroke-linecap:round;
+        stroke-dasharray:18 200;
+        filter:url(#goldGlow);
+        opacity:0;
+      }
+
+      /* The real "filter" effect in the video: glowing energy particles flowing along paths */
+      .trail1 { animation: trailPulse 3s linear infinite; }
+      .trail2 { animation: trailPulse 3s linear infinite .2s; }
+      .trail3 { animation: trailPulse 3s linear infinite .4s; }
+      .trail4 { animation: trailPulse 3s linear infinite .6s; }
+      .trail5 { animation: trailPulse 3s linear infinite 1.45s; }
+
+      @keyframes trailPulse {
+        0%, 8%, 100% { opacity:0; stroke-dashoffset:190; }
+        18% { opacity:.95; }
+        42% { opacity:.55; stroke-dashoffset:0; }
+        55% { opacity:0; }
+      }
+
+      .energy {
+        fill:url(#gold);
+        filter:url(#goldGlow);
+      }
+
+      .energyStatic {
+        fill:url(#gold);
+        filter:url(#goldGlow);
+        animation: blink 2.2s ease-in-out infinite;
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity:.35; }
+        50% { opacity:1; }
+      }
+
+      .scanLine {
+        opacity:.08;
+        animation: bgScan 3s linear infinite;
+      }
+
+      @keyframes bgScan {
+        from { transform: translateX(-260px); }
+        to { transform: translateX(1108px); }
+      }
+    </style>
+  </defs>
+
+  <rect width="1108" height="372" fill="url(#bgVignette)"/>
+
+  <!-- subtle background horizontal scan texture -->
+  <g class="scanLine">
+    <rect x="0" y="0" width="170" height="372" fill="url(#sweepFade)"/>
+  </g>
+
+  <!-- left cards -->
+  <g filter="url(#purpleCardGlow)">
+    <rect x="148" y="60" width="245" height="58" rx="8" fill="url(#purpleCard)" stroke="#6544bf"/>
+    <rect x="148" y="132" width="245" height="58" rx="8" fill="url(#purpleCard)" stroke="#6544bf"/>
+    <rect x="148" y="204" width="245" height="58" rx="8" fill="url(#purpleCard)" stroke="#6544bf"/>
+    <rect x="148" y="276" width="245" height="58" rx="8" fill="url(#purpleCard)" stroke="#6544bf"/>
+  </g>
+
+  <!-- repeated card content -->
+  <g>
+    <g transform="translate(93 24)">
+      <circle cx="82" cy="65" r="12" fill="#3C246F" stroke="#7E63D6"/>
+      <circle cx="82" cy="62" r="3" stroke="#C5B7FF"/>
+      <path d="M75 72c2-5 12-5 14 0" stroke="#C5B7FF" stroke-width="1.1" stroke-linecap="round"/>
+      <text x="105" y="58" class="label">CUSTOMER DEPOSIT ADDRESS</text>
+      <text x="105" y="76" class="txt">Unique · Free · Permanent</text>
+    </g>
+    <g transform="translate(93 96)">
+      <circle cx="82" cy="65" r="12" fill="#3C246F" stroke="#7E63D6"/>
+      <circle cx="82" cy="62" r="3" stroke="#C5B7FF"/>
+      <path d="M75 72c2-5 12-5 14 0" stroke="#C5B7FF" stroke-width="1.1" stroke-linecap="round"/>
+      <text x="105" y="58" class="label">CUSTOMER DEPOSIT ADDRESS</text>
+      <text x="105" y="76" class="txt">Unique · Free · Permanent</text>
+    </g>
+    <g transform="translate(93 168)">
+      <circle cx="82" cy="65" r="12" fill="#3C246F" stroke="#7E63D6"/>
+      <circle cx="82" cy="62" r="3" stroke="#C5B7FF"/>
+      <path d="M75 72c2-5 12-5 14 0" stroke="#C5B7FF" stroke-width="1.1" stroke-linecap="round"/>
+      <text x="105" y="58" class="label">CUSTOMER DEPOSIT ADDRESS</text>
+      <text x="105" y="76" class="txt">Unique · Free · Permanent</text>
+    </g>
+    <g transform="translate(93 240)">
+      <circle cx="82" cy="65" r="12" fill="#3C246F" stroke="#7E63D6"/>
+      <circle cx="82" cy="62" r="3" stroke="#C5B7FF"/>
+      <path d="M75 72c2-5 12-5 14 0" stroke="#C5B7FF" stroke-width="1.1" stroke-linecap="round"/>
+      <text x="105" y="58" class="label">CUSTOMER DEPOSIT ADDRESS</text>
+      <text x="105" y="76" class="txt">Unique · Free · Permanent</text>
+    </g>
+  </g>
+
+  <!-- base connector lines -->
+  <use href="#route1" class="line"/>
+  <use href="#route2" class="line"/>
+  <use href="#route3" class="line"/>
+  <use href="#route4" class="line"/>
+  <use href="#routeOut" class="line"/>
+
+  <!-- glowing path trails -->
+  <use href="#route1" class="trail trail1"/>
+  <use href="#route2" class="trail trail2"/>
+  <use href="#route3" class="trail trail3"/>
+  <use href="#route4" class="trail trail4"/>
+  <use href="#routeOut" class="trail trail5"/>
+
+  <!-- static connection dots -->
+  <circle class="energyStatic" cx="393" cy="89" r="3"/>
+  <circle class="energyStatic" cx="393" cy="161" r="3"/>
+  <circle class="energyStatic" cx="393" cy="234" r="3"/>
+  <circle class="energyStatic" cx="393" cy="306" r="3"/>
+  <circle class="energyStatic" cx="512" cy="190" r="4"/>
+  <circle class="energyStatic" cx="763" cy="195" r="5"/>
+  <circle class="energyStatic" cx="803" cy="195" r="3"/>
+  <circle class="energyStatic" cx="844" cy="195" r="3"/>
+
+  <!-- moving glowing particles: this is the key part -->
+  <circle r="5" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="0s">
+      <mpath href="#route1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="5" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin=".2s">
+      <mpath href="#route2"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite" begin=".2s"/>
+  </circle>
+
+  <circle r="5" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin=".4s">
+      <mpath href="#route3"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite" begin=".4s"/>
+  </circle>
+
+  <circle r="4" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin=".6s">
+      <mpath href="#route4"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.55;1" dur="3s" repeatCount="indefinite" begin=".6s"/>
+  </circle>
+
+  <circle r="6" class="energy">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="1.45s">
+      <mpath href="#routeOut"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.75;1" dur="3s" repeatCount="indefinite" begin="1.45s"/>
+  </circle>
+
+  <!-- center card -->
+  <g filter="url(#orangeCardGlow)">
+    <rect x="522" y="147" width="181" height="96" rx="19" fill="#151428" stroke="#8B5413" stroke-width="2"/>
+    <rect x="528" y="153" width="169" height="84" rx="13" fill="url(#orangeCard)"/>
+    <circle cx="612" cy="173" r="7" fill="#A95E00" stroke="#F5BA24"/>
+    <path d="M608.8 172.8l2.2 2.2 4.1-5" stroke="#F8C84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="565" y="203" class="title">SmartSweep</text>
+    <text x="568" y="222" class="subOrange">Auto-consolidates</text>
+  </g>
+
+  <text x="752" y="180" class="tiny">SWEEPS TO</text>
+
+  <!-- right card -->
+  <g filter="url(#greenCardGlow)">
+    <rect x="858" y="147" width="197" height="96" rx="19" fill="#0A2927" stroke="#026B5D" stroke-width="2"/>
+    <rect x="864" y="153" width="185" height="84" rx="13" fill="url(#greenCard)"/>
+    <circle cx="952" cy="173" r="7" fill="#006E51" stroke="#00D084"/>
+    <path d="M948.8 172.8l2.2 2.2 4.1-5" stroke="#0DE68F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="890" y="203" class="title">Your Cold Wallet</text>
+    <text x="923" y="222" class="subGreen">Self-custody</text>
+  </g>
+</svg>
