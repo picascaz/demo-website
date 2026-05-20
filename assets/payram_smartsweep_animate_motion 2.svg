@@ -236,8 +236,8 @@
     <rect x="528" y="153" width="169" height="84" rx="13" fill="url(#orangeCard)"/>
     <circle cx="612" cy="173" r="7" fill="#A95E00" stroke="#F5BA24"/>
     <path d="M608.8 172.8l2.2 2.2 4.1-5" stroke="#F8C84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="565" y="203" class="title">SmartSweep</text>
-    <text x="568" y="222" class="subOrange">Auto-consolidates</text>
+    <text x="595" y="203" class="title">D4U</text>
+    <text x="580" y="222" class="subOrange">Hybrid Network</text>
   </g>
 
   <text x="752" y="180" class="tiny">SWEEPS TO</text>

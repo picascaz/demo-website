@@ -89,12 +89,10 @@
             >
 
             <h1 id="hero-title">
-              <span class="hero-title-row">
+              <span class="hero-title-rotator" aria-live="polite">
                 <span id="lead-word">Defense</span>
-              </span>
-              <span class="">
-                <span class="divider" data-i18n="heroDivider">For</span>
-                <span class="hero-title-accent" id="target-word">USDT</span>
+                <span class="hero-title-divider" data-i18n="heroDivider">For</span>
+                <span id="target-word">USDT</span>
               </span>
             </h1>
 
@@ -352,7 +350,7 @@
           </article>
         </div>
       </section>
-
+-->
       <section class="features-section" aria-labelledby="features-title">
         <div class="features-copy">
           <h2 id="features-title" data-i18n="featureOneTitle">
@@ -369,23 +367,23 @@
             alt="D4U Sentry animated filtering demo"
           />
         </div>
-      </section> -->
+      </section>
 
       <section
-        class="features-section feature-reverse"
+        class="features-section"
         aria-labelledby="privacy-feature-title"
       >
+        <div class="features-copy">
+          <h2 id="privacy-feature-title" data-i18n="featureTwoTitle">
+            如你所愿，隐形存在。私密支付 USDT。
+          </h2>
+        </div>
+
         <div class="sentry-demo sentry-demo-image">
           <img
             src="./assets/updated_uploaded_svg_wallet_hybrid_network.svg"
             alt="D4U private payment animated demo"
           />
-        </div>
-
-        <div class="features-copy">
-          <h2 id="privacy-feature-title" data-i18n="featureTwoTitle">
-            如你所愿，隐形存在。私密支付 USDT。
-          </h2>
         </div>
       </section>
 
@@ -405,21 +403,21 @@
       </section>
 
       <section
-        class="features-section feature-reverse"
+        class="features-section"
         aria-labelledby="vault-feature-title"
       >
+        <div class="features-copy">
+          <h2 id="vault-feature-title" data-i18n="featureFourTitle">
+            多个金库，多种用途，尽在一处
+          </h2>
+        </div>
+
         <div class="sentry-demo sentry-demo-image">
           <object
             data="./assets/d4u_sentry_svg_animated%202.svg"
             type="image/svg+xml"
             aria-label="D4U multiple vaults animated demo"
           ></object>
-        </div>
-
-        <div class="features-copy">
-          <h2 id="vault-feature-title" data-i18n="featureFourTitle">
-            多个金库，多种用途，尽在一处
-          </h2>
         </div>
       </section>
 
@@ -458,7 +456,7 @@
               </article>
 
               <article class="engine-card">
-                <div class="engine-card-icon tone-purple" aria-hidden="true">
+                <div class="engine-card-icon tone-blue" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path
                       d="M12 3 4 7v6c0 5 3.4 8.4 8 9 3.6-.6 8-4 8-9V7l-8-4Z"
@@ -473,7 +471,7 @@
               </article>
 
               <article class="engine-card">
-                <div class="engine-card-icon tone-orange" aria-hidden="true">
+                <div class="engine-card-icon tone-blue" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
                     <path d="M13.7 21a2 2 0 0 1-3.4 0" />
@@ -486,7 +484,7 @@
               </article>
 
               <article class="engine-card">
-                <div class="engine-card-icon tone-teal" aria-hidden="true">
+                <div class="engine-card-icon tone-blue" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="M4 7h16v10H4z" />
                     <path d="M8 11h8M8 15h5" />
@@ -503,7 +501,7 @@
 
           <div class="engine-group">
             <div class="engine-group-title">
-              <div class="engine-title-icon tone-violet" aria-hidden="true">
+              <div class="engine-title-icon tone-blue" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z" />
                   <path d="M8 12h8M12 8v8" />
@@ -514,7 +512,7 @@
 
             <div class="engine-card-grid two-up">
               <article class="engine-card">
-                <div class="engine-card-icon tone-indigo" aria-hidden="true">
+                <div class="engine-card-icon tone-blue" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <circle cx="6" cy="6" r="2" />
                     <circle cx="18" cy="18" r="2" />
@@ -530,7 +528,7 @@
               </article>
 
               <article class="engine-card">
-                <div class="engine-card-icon tone-pink" aria-hidden="true">
+                <div class="engine-card-icon tone-blue" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path
                       d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
@@ -867,35 +865,50 @@
                 <tr>
                   <th scope="row" data-i18n="compareRowOne">安全收款</th>
                   <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
@@ -905,35 +918,50 @@
                 <tr>
                   <th scope="row" data-i18n="compareRowTwo">隐私支付</th>
                   <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
@@ -943,35 +971,50 @@
                 <tr>
                   <th scope="row" data-i18n="compareRowThree">资金分层</th>
                   <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
@@ -981,35 +1024,50 @@
                 <tr>
                   <th scope="row" data-i18n="compareRowFour">资产隐私归集</th>
                   <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
@@ -1019,35 +1077,50 @@
                 <tr>
                   <th scope="row" data-i18n="compareRowFive">动态地址矩阵</th>
                   <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-no" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-no"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 8l8 8M16 8l-8 8" />
                       </svg>
@@ -1057,35 +1130,50 @@
                 <tr>
                   <th scope="row" data-i18n="compareRowSix">非托管</th>
                   <td class="compare-col-d4u">
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>
                     </span>
                   </td>
                   <td>
-                    <span class="compare-mark compare-mark-yes" aria-hidden="true">
+                    <span
+                      class="compare-mark compare-mark-yes"
+                      aria-hidden="true"
+                    >
                       <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7 12.5 10.5 16 17 9.5" />
                       </svg>

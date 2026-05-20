@@ -126,11 +126,11 @@
         50% { opacity:1; }
       }
 
-      .cardPulse { animation: cardPulse 3s ease-in-out infinite; transform-origin:center; }
+      <!-- .cardPulse { animation: cardPulse 3s ease-in-out infinite; transform-origin:center; }
       @keyframes cardPulse {
         0%,100% { transform:scale(1); }
         50% { transform:scale(1.025); }
-      }
+      } -->
     </style>
   </defs>
 
